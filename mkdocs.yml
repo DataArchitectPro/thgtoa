@@ -5,8 +5,10 @@ site_dir: "site"
 docs_dir: "docs"
 exclude_docs: |
   includes/
-site_url: "https://anonymousplanet.net/"
-repo_url: "https://github.com/Anon-Planet/thgtoa"
+  ru/guide-parts/
+  ru/guide-reviewed/
+site_url: "https://dataarchitectpro.github.io/thgtoa/"
+repo_url: "https://github.com/DataArchitectPro/thgtoa"
 repo_name: ""
 #edit_uri: ""blob/main/docs/{path}?plain=1""
 theme:
