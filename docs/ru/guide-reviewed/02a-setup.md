@@ -366,7 +366,7 @@ Linux также не обязательно является лучшим вы�
 
 #### Отключите всё ненужное { #linux-disable-unnecessary }
 
-- Отключите Bluetooth, если он включён, следуя этому руководству: <https://www.addictivetips.com/ubuntu-linux-tips/disable-bluetooth-in-ubuntu/> <sup>[[Archive.org]](https://web.archive.org/web/https://addictivetips.com/ubuntu-linux-tips/disable-bluetooth-in-ubuntu/)</sup> или выполнив следующую команду:
+- Отключите Bluetooth, если он включён, следуя этому руководству: <https://www.addictivetips.com/ubuntu-linux-tips/disable-bluetooth-in-ubuntu/> <sup>[[Archive.org]](https://web.archive.org/web/https://www.addictivetips.com/ubuntu-linux-tips/disable-bluetooth-in-ubuntu/)</sup> или выполнив следующую команду:
 
     - ```sudo systemctl disable bluetooth.service --force```
 
@@ -529,3 +529,4 @@ Linux также не обязательно является лучшим вы�
 #### Настройка безопасного браузера { #macos-safe-browser }
 
 См. [Безопасный браузер в хостовой ОС](#safe-browser-host-os)
+
