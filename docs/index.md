@@ -1,6 +1,6 @@
 ---
-title: "Home"
-description: "The Hitchhiker's Guide to Online Anonymity"
+title: "Главная"
+description: "Путеводитель автостопщика по анонимности в сети"
 hide:
   - toc
   - navigation
@@ -16,48 +16,54 @@ schema:
     - https://opencollective.com/anonymousplanetorg
 ---
 <div class="hero-block">
-  <h1 class="hero-title">The Hitchhiker's Guide<br><span class="hero-subtitle">to Online Anonymity (and Privacy)</span></h1>
+  <h1 class="hero-title">Путеводитель автостопщика<br><span class="hero-subtitle">по анонимности и приватности в сети</span></h1>
   <p class="hero-tagline">
-    You are being tracked. Your metadata is being sold. Your identity is a product. This guide is your manual out.
+    За вами следят. Ваши метаданные продают. Ваша личность стала товаром. Это руководство поможет выйти из этой системы.
   </p>
   <div class="hero-cta-row">
-    <a href="guide/" class="hero-cta hero-cta--primary">Read the Guide</a>
-    <a href="verify/" class="hero-cta hero-cta--secondary">Verify &amp; Download</a>
+    <a href="ru/guide/" class="hero-cta hero-cta--primary">Читать руководство</a>
+    <a href="ru/verify/" class="hero-cta hero-cta--secondary">Проверить и скачать</a>
   </div>
 </div>
 
 <div class="principles-strip">
-  <span class="principle"><span class="principle-no">No ads.</span></span>
+  <span class="principle"><span class="principle-no">Без рекламы.</span></span>
   <span class="principle-sep">/</span>
-  <span class="principle"><span class="principle-no">No affiliate links.</span></span>
+  <span class="principle"><span class="principle-no">Без партнёрских ссылок.</span></span>
   <span class="principle-sep">/</span>
-  <span class="principle"><span class="principle-no">No bullshit.</span></span>
+  <span class="principle"><span class="principle-no">Без пустословия.</span></span>
 </div>
 
 <div class="index-grid">
 
   <div class="index-card">
-    <h3 class="index-card__title">Read Online</h3>
-    <p class="index-card__body">The full guide — tracking techniques, ID verification, anonymous identity creation, and operational security from first principles.</p>
-    <a href="guide/" class="index-card__link">Open guide</a>
+    <h3 class="index-card__title">Читать онлайн</h3>
+    <p class="index-card__body">Полный гид: способы отслеживания, проверка личности, создание анонимной идентичности и основы операционной безопасности.</p>
+    <a href="ru/guide/" class="index-card__link">Открыть руководство</a>
   </div>
 
   <div class="index-card">
-    <h3 class="index-card__title">Download PDF</h3>
-    <p class="index-card__body">Offline copy as PDF or ODT. Verify the file's integrity with the provided SHA256 checksum and GPG signature before trusting it.</p>
-    <a href="export/thgtoa.pdf" class="index-card__link">Get the files</a>
+    <h3 class="index-card__title">Скачать PDF</h3>
+    <p class="index-card__body">Офлайн-копия в PDF или ODT. Прежде чем доверять файлу, проверьте его целостность по SHA256 и подписи GPG.</p>
+    <a href="export/thgtoa.pdf" class="index-card__link">Получить файлы</a>
   </div>
 
   <div class="index-card">
-    <h3 class="index-card__title">Tor Mirror</h3>
-    <p class="index-card__body">Access over the Tor network. The .onion address means your IP and destination stay private — no exit node exposure.</p>
-    <a href="mirrors/" class="index-card__link">View mirrors</a>
+    <h3 class="index-card__title">Зеркало Tor</h3>
+    <p class="index-card__body">Доступ через сеть Tor. Адрес .onion скрывает ваш IP-адрес и пункт назначения — без выхода через exit node.</p>
+    <a href="ru/mirrors/" class="index-card__link">Посмотреть зеркала</a>
   </div>
 
   <div class="index-card">
-    <h3 class="index-card__title">Verify Authenticity</h3>
-    <p class="index-card__body">Check GPG signatures, SHA256 hashes, and fetch our public keyring. Never trust a download you haven't verified.</p>
-    <a href="verify/" class="index-card__link">How to verify</a>
+    <h3 class="index-card__title">Проверить подлинность</h3>
+    <p class="index-card__body">Проверьте подписи GPG и хеши SHA256, загрузите нашу открытую связку ключей. Не доверяйте непроверенной загрузке.</p>
+    <a href="ru/verify/" class="index-card__link">Как проверить</a>
   </div>
+
+</div>
+
+<div class="md-typeset" markdown="1">
+
+> Русский перевод создан на основе оригинального _The Hitchhiker's Guide to Online Anonymity_ проекта Anonymous Planet. Оригинал и эта производная работа распространяются по лицензии [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 </div>
