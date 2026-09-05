@@ -1,16 +1,16 @@
 ---
-Название: «Автостопом»
-описание: Мы поддерживаем «Автостопом» и пространство «Матрица PSA».
-скрыть:
-  - навигация
-схема:
+title: "Путеводитель автостопщика"
+description: Мы поддерживаем «Путеводитель автостопщика» и пространство PSA Matrix.
+hide:
+  - navigation
+schema:
   "@context": https://schema.org
-  "@type": Организация
+  "@type": Organization
   "@id": https://anonymousplanet.net/
-  название: Анонимная Планета
-  URL: https://anonymousplanet.net/guide/
-  логотип: ../media/profile.png
-  то же, что и:
+  name: Anonymous Planet
+  url: https://anonymousplanet.net/guide/
+  logo: ../media/profile.png
+  sameAs:
     - https://github.com/Anon-Planet
     - https://opencollective.com/anonymousplanetorg
 ---
@@ -18,7 +18,7 @@
 <div class="guide-intro-lead" markdown="1">
 
 1. **Хотите понять текущее состояние конфиденциальности и анонимности в Интернете, но при этом не обязательно вдаваться в подробности?**
-    – Прочтите [Введение](#introduction), [Требования](#requirements-limitations), понимая некоторые основы, начиная с [ваша сеть](#network) и [последние примечания](#final-note).
+    - Прочтите [Введение](#introduction), [Требования](#requirements-limitations), понимая некоторые основы, начиная с [ваша сеть](#network) и [последние примечания](#final-note).
 
 2. **Хотите узнать, а также узнать, как удалить некоторую информацию о себе в Интернете?**
     - Все предметы в нет. 1 и [как удалить ваши личные данные из поисковых систем и других платформ](#removing-identities), чтобы получить представление о том, как удалить ваши данные из Интернета.
@@ -56,7 +56,7 @@
 
 - В этом руководстве предполагается, что у вас уже есть доступ к некоторому (Windows/Linux/macOS) портативному компьютеру (в идеале это не рабочее/совместное устройство) и базовое понимание того, как работают компьютеры.
 
-– Наберитесь терпения, так как этот процесс может занять несколько недель, если вы хотите просмотреть весь контент.
+- Наберитесь терпения, так как этот процесс может занять несколько недель, если вы хотите просмотреть весь контент.
 
 - Имейте немного свободного времени, которое можно посвятить этому процессу (в зависимости от того, какой маршрут вы выберете).
 
@@ -207,7 +207,7 @@ DNS[^31] — это адресная книга Интернета: каждый
 По умолчанию ваши DNS-запросы направляются на преобразователь вашего интернет-провайдера. Это создает несколько проблем с компаундированием:
 
 - **Ведение журнала.** Интернет-провайдеры часто подчиняются законам о хранении данных и могут регистрировать каждый разрешенный вами домен, создавая полную запись вашей истории посещений. Этот журнал можно вызвать в суд, продать или взломать.
-- **Цензура.** Блокировка DNS — наиболее распространенный механизм цензуры во всем мире.[^32]ZZX209X1QZZZ – Интернет-провайдеры просто возвращают ложный адрес для заблокированных доменов.
+- **Цензура.** Блокировка DNS — наиболее распространенный механизм цензуры во всем мире[^32][^33] - Интернет-провайдеры просто возвращают ложный адрес для заблокированных доменов.
 - **Вмешательство.** Даже если вы настроите частный преобразователь DNS, ваш интернет-провайдер может перехватывать и перезаписывать ответы DNS при передаче, поскольку стандартный трафик DNS не зашифрован.
 - **Жестко заданные преобразователи.** Многие устройства полностью обходят системные настройки DNS. Примерно 70% смарт-телевизоров и 46% игровых консолей[^34] используют жестко запрограммированные DNS-серверы, которые невозможно изменить через настройки ОС — их необходимо заблокировать на уровне сети[^35] или принять разоблачение.
 
@@ -323,7 +323,7 @@ RFID означает Радиочастотная идентификация[^5
 
 - НАДЕЖДА 2020, <https://archive.org/details/hopeconf2020/20200725_1800_Advanced_Wi-Fi_Hacking_With_%245_Microcontrollers.mp4>
 
-– YouTube, Hak5, Wi-Fi Pineapple Mark VII <https://www.youtube.com/watch?v=7v3JR4Wlw4Q> <sup>[[Invidious]](https://yewtu.be/watch?v=7v3JR4Wlw4Q)</sup>
+- YouTube, Hak5, Wi-Fi Pineapple Mark VII <https://www.youtube.com/watch?v=7v3JR4Wlw4Q> <sup>[[Invidious]](https://yewtu.be/watch?v=7v3JR4Wlw4Q)</sup>
 
 Эти устройства поместятся в небольшую сумку и смогут подключиться к среде Wi-Fi в любом месте в пределах своего радиуса действия. Например, бар/ресторан/кафе/холл отеля. Эти устройства могут заставить клиентов Wi-Fi отключиться от своей текущей сети Wi-Fi (с помощью атак деаутентификации и диссоциации[^66]), одновременно подменяя обычные сети Wi-Fi в том же месте. Они будут продолжать выполнять эту атаку до тех пор, пока ваш компьютер или вы не решите попытаться подключиться к мошеннической точке доступа.
 
@@ -582,7 +582,7 @@ MAC-адрес[^99] — это уникальный идентификатор, 
 
 **Android/Google:**
 
-– Просто прочитайте их политику конфиденциальности <https://policies.google.com/privacy> <sup>[[Archive.org]](https://web.archive.org/web/https://policies.google.com/privacy)</sup>.
+- Просто прочитайте их политику конфиденциальности <https://policies.google.com/privacy> <sup>[[Archive.org]](https://web.archive.org/web/https://policies.google.com/privacy)</sup>.
 - Школа компьютерных наук и статистики, Тринити-колледж, Дублин, Ирландия. Конфиденциальность мобильных телефонов: измерение данных, которые iOS и Android отправляют в Apple и Google <https://www.scss.tcd.ie/doug.leith/apple_google.pdf> <sup>[[Archive.org]](https://web.archive.org/web/https://www.scss.tcd.ie/doug.leith/apple_google.pdf)</sup>
 
 **IOS/Apple:**
@@ -598,7 +598,7 @@ MAC-адрес[^99] — это уникальный идентификатор, 
 
 **macOS:**
 
-– Более подробная информация о <https://support.apple.com/guide/mac-help/share-analytics-information-mac-apple-mh27990/mac> <sup>[[Archive.org]](https://web.archive.org/web/https://support.apple.com/guide/mac-help/share-analytics-information-mac-apple-mh27990/mac)</sup>
+- Более подробная информация о <https://support.apple.com/guide/mac-help/share-analytics-information-mac-apple-mh27990/mac> <sup>[[Archive.org]](https://web.archive.org/web/https://support.apple.com/guide/mac-help/share-analytics-information-mac-apple-mh27990/mac)</sup>
 
 **Убунту:**
 
@@ -769,7 +769,7 @@ GDID — это постоянный, назначаемый сервером 64
 
 Вот несколько примеров:
 
-– Специализированные компании продают, например, правоохранительным органам продукты для анализа активности в социальных сетях, такие как <https://mediasonar.com/> <sup>[[Archive.org]](https://web.archive.org/web/https://mediasonar.com/)</sup>.
+- Специализированные компании продают, например, правоохранительным органам продукты для анализа активности в социальных сетях, такие как <https://mediasonar.com/> <sup>[[Archive.org]](https://web.archive.org/web/https://mediasonar.com/)</sup>.
 
 - Например, в качестве основы аутентификации используется скорость набора текста пользователя, количество нажатий клавиш, характер ошибок (скажем, случайное нажатие буквы «l» вместо «k» в трех из каждых семи транзакций) и движения мыши определяют уникальный образец поведения этого человека[^152]. Некоторые коммерческие сервисы, такие как TypingDNA (<https://www.typingdna.com/> <sup>[[Archive.org]](https://web.archive.org/web/https://www.typingdna.com/)</sup>), даже предлагают такой анализ в качестве замены двухфакторной аутентификации.
 
@@ -827,7 +827,7 @@ GDID — это постоянный, назначаемый сервером 64
 
 В Bellingcat[^154] также есть несколько случаев, связанных с OSINT. Взгляните на их очень информативный (но немного устаревший) набор инструментов здесь: <https://docs.google.com/spreadsheets/d/18rtqh8EG2q1xBo2cLNyhIDuK9jrPGwYr9DI2UncoqJQ/edit#gid=930747607> <sup>[[Archive.org]](https://web.archive.org/web/https://docs.google.com/spreadsheets/d/18rtqh8EG2q1xBo2cLNyhIDuK9jrPGwYr9DI2UncoqJQ/edit)</sup>
 
-**В нашем сообществе Matrix есть дискуссионная комната OSINT. Присоединяйтесь по адресу ``ZZX829X1QZZ``.**
+**В нашем сообществе Matrix есть дискуссионная комната OSINT. Присоединяйтесь по адресу ```#OSINT:matrix.org```.**
 
 Вы также можете просмотреть некоторые удобные списки некоторых доступных инструментов OSINT здесь, если хотите опробовать их на себе, например:
 
@@ -873,7 +873,7 @@ GDID — это постоянный, назначаемый сервером 64
 
 - Bellingcat, Учебное пособие по цифровым исследованиям: расследование взрыва коалиции под руководством Саудовской Аравии в йеменской больнице <https://www.youtube.com/watch?v=cAVZaPiVArA> <sup>[[Invidious]](https://yewtu.be/watch?v=cAVZaPiVArA)</sup>
 
-– Bellingcat, Учебное пособие по цифровым исследованиям: использование распознавания лиц в расследованиях <https://www.youtube.com/watch?v=awY87q2Mr0E> <sup>[[Invidious]](https://yewtu.be/watch?v=awY87q2Mr0E)</sup>
+- Bellingcat, Учебное пособие по цифровым исследованиям: использование распознавания лиц в расследованиях <https://www.youtube.com/watch?v=awY87q2Mr0E> <sup>[[Invidious]](https://yewtu.be/watch?v=awY87q2Mr0E)</sup>
 
 - Bellingcat, Учебное пособие по цифровым исследованиям: геолокация (предположительно) коррумпированных венесуэльских чиновников в Европе <https://www.youtube.com/watch?v=bS6gYWM4kzY> <sup>[[Invidious]](https://yewtu.be/watch?v=bS6gYWM4kzY)</sup>
 
@@ -897,7 +897,7 @@ GDID — это постоянный, назначаемый сервером 64
 
 - Потому что у вас есть или был у них профиль, и вы назвали себя.
 
-- Даже если вы никогда не создавали профиль на этих платформах, он у вас все равно есть, даже не зная об этом.
+- Даже если вы никогда не создавали профиль на этих платформах, он у вас все равно есть, даже не зная об этом[^170]'[^171]'[^172]'[^173]'[^174].
 
 - Потому что другие люди отметили вас или опознали вас на своих фотографиях с праздников/вечеринок.
 
@@ -935,7 +935,7 @@ Apple делает FaceID массовым явлением и продвига�
 
 - Носите солнцезащитные очки в дополнение к маске и бейсболке, чтобы не опознать человека по чертам глаз.
 
-– Подумайте о том, чтобы носить специальные солнцезащитные очки (к сожалению, дорогие) под названием "Reflectacles" <https://www.reflectacles.com/> <sup>[[Archive.org]](https://web.archive.org/web/https://www.reflectacles.com/)</sup>. Было проведено небольшое исследование, показывающее их эффективность против систем распознавания лиц IBM и Amazon[^201].
+- Подумайте о том, чтобы носить специальные солнцезащитные очки (к сожалению, дорогие) под названием "Reflectacles" <https://www.reflectacles.com/> <sup>[[Archive.org]](https://web.archive.org/web/https://www.reflectacles.com/)</sup>. Было проведено небольшое исследование, показывающее их эффективность против систем распознавания лиц IBM и Amazon[^201].
 
 - Все это может оказаться бесполезным из-за упомянутого ранее распознавания походки, но здесь может быть надежда, если у вас есть 3D-принтер: <https://gitlab.com/FG-01/fg-01> <sup>[[Archive.org]](https://web.archive.org/web/https://gitlab.com/FG-01/fg-01)</sup>
 
@@ -971,7 +971,7 @@ Apple делает FaceID массовым явлением и продвига�
 
 - Что такое формат файла? <https://www.youtube.com/watch?v=VVdmmN0su6E> <sup>[[Invidious]](https://yewtu.be/watch?v=VVdmmN0su6E)</sup>
 
-– Анж Альбертини: необычные форматы файлов: <https://www.youtube.com/watch?v=hdCs6bPM4is> <sup>[[Invidious]](https://yewtu.be/watch?v=hdCs6bPM4is)</sup>
+- Анж Альбертини: необычные форматы файлов: <https://www.youtube.com/watch?v=hdCs6bPM4is> <sup>[[Invidious]](https://yewtu.be/watch?v=hdCs6bPM4is)</sup>
 
 Всегда следует проявлять крайнюю осторожность. См. раздел [Виртуализация](#virtualization), чтобы предотвратить утечку любой информации даже в случае открытия такого вредоносного файла.
 
@@ -1133,13 +1133,13 @@ Apple делает FaceID массовым явлением и продвига�
 
 Вот, например, проект с открытым исходным кодом, который вы можете использовать для самостоятельного восстановления текста из некоторых размытых изображений: <https://github.com/beurtschipper/Depix> <sup>[[Archive.org]](https://web.archive.org/web/https://github.com/beurtschipper/Depix)</sup>
 
-![изображение14](../media/image14.png)
+![image14](../media/image14.png)
 
 Это, конечно, проект с открытым исходным кодом, доступный для всех. Но вы можете себе представить, что подобные методы, вероятно, уже использовались другими противниками. Их можно использовать для раскрытия размытой информации из опубликованных документов, которую затем можно использовать для деанонимизации вас.
 
 Существуют также руководства по использованию таких методов с использованием инструментов редактирования фотографий, таких как GIMP, например <https://medium.com/@somdevsangwan/unblurring-images-for-osint-and-more-part-1-5ee36db6a70b> <sup>[[Archive.org]](https://web.archive.org/web/https://medium.com/@somdevsangwan/unblurring-images-for-osint-and-more-part-1-5ee36db6a70b)</sup>, за которым следует <https://medium.com/@somdevsangwan/deblurring-images-for-osint-part-2-ba564af8eb5d> <sup>[[Scribe.rip]](https://scribe.rip/@somdevsangwan/deblurring-images-for-osint-part-2-ba564af8eb5d)</sup> <sup>[[Archive.org]](https://web.archive.org/web/https://medium.com/@somdevsangwan/deblurring-images-for-osint-part-2-ba564af8eb5d)</sup>
 
-![изображение15](../media/image15.png)
+![image15](../media/image15.png)
 
 Наконец, здесь вы найдете множество ресурсов по устранению размытия: <https://github.com/subeeshvasu/Awesome-Deblurring> <sup>[[Archive.org]](https://web.archive.org/web/https://github.com/subeeshvasu/Awesome-Deblurring)</sup>
 
@@ -1149,7 +1149,7 @@ Apple делает FaceID массовым явлением и продвига�
 
 Вот результат изображения выше:
 
-![изображение16](../media/image16.png)
+![image16](../media/image16.png)
 
 Конечно, на данном этапе этот инструмент больше похож на «угадывание», чем на устранение размытия, но его может быть достаточно, чтобы найти вас с помощью различных сервисов обратного поиска изображений.
 
@@ -1221,8 +1221,8 @@ Apple делает FaceID массовым явлением и продвига�
 
 Установка расширения [NoScript](https://noscript.net/) предотвратит атаку **по умолчанию только в частной Windows** с помощью новой «функции TabGuard». Но его можно включить в параметрах NoScript для работы во всех Windows. См.:
 
-– Релизный твит: <https://twitter.com/ma1/status/1557751019945299969> <sup>[[Archive.org]](https://web.archive.org/web/https://twitter.com/ma1/status/1557751019945299969)</sup>
-– Объяснение пользователя: <https://noscript.net/usage/#crosstab-identity-leak-protection> <sup>[[Archive.org]](https://web.archive.org/web/https://noscript.net/usage/#crosstab-identity-leak-protection)</sup>
+- Релизный твит: <https://twitter.com/ma1/status/1557751019945299969> <sup>[[Archive.org]](https://web.archive.org/web/https://twitter.com/ma1/status/1557751019945299969)</sup>
+- Объяснение пользователя: <https://noscript.net/usage/#crosstab-identity-leak-protection> <sup>[[Archive.org]](https://web.archive.org/web/https://noscript.net/usage/#crosstab-identity-leak-protection)</sup>
 - Сообщение на форуме проекта Tor: <https://forum.torproject.net/t/tor-browser-can-leak-your-identity-through-side-channel-attack/4005/2> <sup>[[Archive.org]](https://web.archive.org/web/https://forum.torproject.net/t/tor-browser-can-leak-your-identity-through-side-channel-attack/4005/2)</sup>
 - Расширение NoScript для Firefox (Firefox и другие браузеры на базе Firefox, кроме браузера Tor): <https://addons.mozilla.org/en-US/firefox/addon/noscript/>
 - Расширение NoScript для браузеров на базе Chromium (Brave, Chrome, Edge и других браузеров на базе Chromium): <https://chrome.google.com/webstore/detail/noscript/doojmbjmlfjjnbmnoijecmcbfeoakpjm?hl=en>
@@ -1260,7 +1260,7 @@ Apple делает FaceID массовым явлением и продвига�
 
 - Видео SANS по цифровой криминалистике и реагированию на инциденты, <https://www.youtube.com/c/SANSDigitalForensics/videos>
 
-И, наконец, вот очень поучительный подробный документ о текущем состоянии безопасности IOS/Android от Университета Джона Хопкинса: https://securephones.io/main.html[^254]..
+И, наконец, вот очень поучительный подробный документ о текущем состоянии безопасности IOS/Android от Университета Джона Хопкинса: https://securephones.io/main.html[^254].
 
 Когда дело доходит до вашего ноутбука, методы криминалистической экспертизы многочисленны и широко распространены. Многие из этих проблем можно решить, используя полное шифрование диска, виртуализацию (см. [Виртуализация](#virtualization)) и компартментализацию. Позже в этом руководстве будут подробно описаны такие угрозы и методы их устранения.
 
@@ -1286,9 +1286,9 @@ Apple делает FaceID массовым явлением и продвига�
 
 Тем не менее, это не мешает некоторым делать это и публиковать различные производственные приложения/сервисы, используя собственную криптографию или собственные методы с закрытым исходным кодом:
 
-– Следует проявлять осторожность при использовании приложений/служб, использующих методы шифрования с закрытым исходным кодом или собственные методы. Все хорошие криптостандарты общедоступны и проверены экспертами, и не должно возникнуть проблем с раскрытием того, какой вы используете.
+- Следует проявлять осторожность при использовании приложений/служб, использующих методы шифрования с закрытым исходным кодом или собственные методы. Все хорошие криптостандарты общедоступны и проверены экспертами, и не должно возникнуть проблем с раскрытием того, какой вы используете.
 
-– Следует с осторожностью относиться к приложениям/службам, использующим «модифицированный» или собственный криптографический метод[^259].
+- Следует с осторожностью относиться к приложениям/службам, использующим «модифицированный» или собственный криптографический метод[^259].
 
 - По умолчанию вы не должны доверять какой-либо «Создайте свою собственную криптовалюту», пока она не будет проверена, рецензирована, проверена и принята криптографическим сообществом[^260]'[^261].
 
@@ -1338,7 +1338,7 @@ Apple делает FaceID массовым явлением и продвига�
 
     - Предпочитаю: TLS 1.3 (в идеале TLS 1.3 с поддержкой ECH/eSNI) или хотя бы TLS 1.2 (широко используемый)
 
-    – Избегайте: всего остального (TLS =<1.1, SSL =<3).
+    - Избегайте: всего остального (TLS =<1.1, SSL =<3).
 
 - Подписание сообщений/файлов с помощью GnuPG (GPG):
 
@@ -1346,13 +1346,13 @@ Apple делает FaceID массовым явлением и продвига�
 
         + **Рассмотрим более современную**[^270] **альтернативу PGP/GPG: Minisign <https://jedisct1.github.io/minisign/>** <sup>[[Archive.org]](https://web.archive.org/web/https://jedisct1.github.io/minisign/)</sup>
 
-    – Избегайте: RSA 2048 бит.
+    - Избегайте: RSA 2048 бит.
 
 - SSH-ключи:
 
     - ED25519 (предпочтительно) или RSA 4096 бит*
 
-    – Избегайте: RSA 2048 бит.
+    - Избегайте: RSA 2048 бит.
 
 - **Внимание: RSA и ED25519, к сожалению, не считаются «квантово-устойчивыми»**[^271] **и хотя они еще не взломаны, они, вероятно, будут взломаны когда-нибудь в будущем. Это всего лишь вопрос времени, а не того, будет ли RSA когда-либо сломан. Таким образом, в этих контекстах они предпочтительнее из-за отсутствия лучшей возможности.**
 
@@ -1430,7 +1430,7 @@ Apple делает FaceID массовым явлением и продвига�
 
     - Эксфильтрация данных через частоты GSM со скомпрометированного (с вредоносным ПО) изолированного компьютера <https://www.youtube.com/watch?v=RChj7Mg3rC4> <sup>[[Invidious]](https://yewtu.be/watch?v=RChj7Mg3rC4)</sup>
 
-    – Утечка данных посредством электромагнитного излучения со взломанного устройства отображения <https://www.youtube.com/watch?v=2OzTWiGl1rM&t=20s> <sup>[[Invidious]](https://yewtu.be/watch?v=2OzTWiGl1rM&t=20s)</sup>
+    - Утечка данных посредством электромагнитного излучения со взломанного устройства отображения <https://www.youtube.com/watch?v=2OzTWiGl1rM&t=20s> <sup>[[Invidious]](https://yewtu.be/watch?v=2OzTWiGl1rM&t=20s)</sup>
 
     - Эксфильтрация данных с помощью магнитных волн со взломанного компьютера с воздушным зазором на смартфон, хранящийся в сумке Фарадея <https://www.youtube.com/watch?v=yz8E5n1Tzlo> <sup>[[Invidious]](https://yewtu.be/watch?v=yz8E5n1Tzlo)</sup>
 
@@ -1480,7 +1480,7 @@ Apple делает FaceID массовым явлением и продвига�
 
 - Вам также может быть интересен этот сервис <https://tosdr.org/> <sup>[[Archive.org]](https://web.archive.org/web/https://tosdr.org/)</sup> (Условия предоставления услуг, не читал), который даст вам хороший обзор различных Условий обслуживания многих сервисов.
 
-– Посетите <https://www.eff.org/issues/privacy> <sup>[[Archive.org]](https://web.archive.org/web/https://www.eff.org/issues/privacy)</sup>, чтобы найти дополнительные ресурсы.
+- Посетите <https://www.eff.org/issues/privacy> <sup>[[Archive.org]](https://web.archive.org/web/https://www.eff.org/issues/privacy)</sup>, чтобы найти дополнительные ресурсы.
 
 - Посетите сайт <https://en.wikipedia.org/wiki/List_of_government_mass_surveillance_projects> <sup>[[Wikiless]](https://wikiless.tiekoetter.com/wiki/List_of_government_mass_surveillance_projects)</sup> <sup>[[Archive.org]](https://web.archive.org/web/https://en.wikipedia.org/wiki/List_of_government_mass_surveillance_projects)</sup>, чтобы получить обзор всех известных проектов массового наблюдения, текущих и прошлых.
 
@@ -1488,7 +1488,7 @@ Apple делает FaceID массовым явлением и продвига�
 
 - Рассмотрите возможность найти и прочитать книгу Майкла Баззелла «Техники разведки с открытым исходным кодом» (восьмое издание на момент написания статьи, чтобы узнать больше о последних методах OSINT) <https://inteltechniques.com/book1.html>
 
-– Наконец, проверьте <https://www.freehaven.net/anonbib/date.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.freehaven.net/anonbib/date.html)</sup>, чтобы найти последние научные статьи, посвященные анонимности в Интернете.
+- Наконец, проверьте <https://www.freehaven.net/anonbib/date.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.freehaven.net/anonbib/date.html)</sup>, чтобы найти последние научные статьи, посвященные анонимности в Интернете.
 
 **Примечания**
 
@@ -1540,7 +1540,7 @@ Apple делает FaceID массовым явлением и продвига�
 
 Во-первых, вот небольшая базовая диаграмма UML, показывающая доступные варианты в соответствии с вашими навыками/бюджетом/временем/ресурсами.
 
-![изображение18](../media/image18.png)
+![image18](../media/image18.png)
 
 ### Ограничения по времени { #timing-limitations }
 
@@ -1700,7 +1700,7 @@ Apple делает FaceID массовым явлением и продвига�
 
 - Посмотрите <https://censoredplanet.org/> и посмотрите, есть ли там данные о вашей стране.
 
-– Специально для Китая: <https://gfwatch.org/> и <https://www.usenix.org/system/files/sec21-hoang.pdf> <sup>[[Archive.org]](https://web.archive.org/web/https://www.usenix.org/system/files/sec21-hoang.pdf)</sup>.
+- Специально для Китая: <https://gfwatch.org/> и <https://www.usenix.org/system/files/sec21-hoang.pdf> <sup>[[Archive.org]](https://web.archive.org/web/https://www.usenix.org/system/files/sec21-hoang.pdf)</sup>.
 
 - Проверьте себя с помощью OONI (это может быть рискованно во враждебной среде).
 
@@ -1852,9 +1852,9 @@ _Примечание относительно вашего текущего т�
 
 - После запуска нажмите правый верхний значок **Настройки**.
 
-– Выберите **Настройки** > **Конфиденциальность и безопасность** > **Сеть Tor**.
+- Выберите **Настройки** > **Конфиденциальность и безопасность** > **Сеть Tor**.
 
-– Выберите **Мост конфигурации**.
+- Выберите **Мост конфигурации**.
 
 - Прочтите [Использование мостов Tor во враждебных средах] (#tor-bridges).
 
@@ -1884,11 +1884,11 @@ _Доступно только для пользователей Tor на нас
 
 - Нажмите на меню (внизу справа)
 
-– Нажмите **Настройки**.
+- Нажмите **Настройки**.
 
-– Перейдите в раздел **Конфиденциальность и безопасность**.
+- Перейдите в раздел **Конфиденциальность и безопасность**.
 
-– Нажмите **Настройки безопасности**.
+- Нажмите **Настройки безопасности**.
 
 Подробности о каждом уровне вы найдете здесь: <https://tb-manual.torproject.org/security-settings/> <sup>[[Archive.org]](https://web.archive.org/web/https://tb-manual.torproject.org/security-settings/)</sup>, но вот краткое описание:
 
@@ -2070,7 +2070,7 @@ Tails — это удивительно простой способ быстро
 
 Это позволит создать гибридную систему, сочетающую Tails с опциями виртуализации маршрута Whonix в этом руководстве.
 
-![изображение19](../media/image19.png)
+![image19](../media/image19.png)
 
 **Примечание. Дополнительные сведения об изоляции потока см. в разделе** [Выберите метод подключения](#whonix-connectivity) **в маршруте Whonix**.
 
