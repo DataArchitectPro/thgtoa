@@ -1,9 +1,0 @@
-[tool.commitizen]
-name = "cz_conventional_commits"
-
-# enforce sign-off below as well
-extra_arguments = ["-S", "--signoff"]
-
-# harmless redundancy
-[tool.commitizen.customize]
-schema_pattern = '^(feat|add|fix|bugfix|revert|security|perf|refactor|change|chore|ci|docs|style|test|build)(\(.+\))?(!)?: .{1,72}(\n.*)*\nSigned-off-by: .+ <.+@.+>'
