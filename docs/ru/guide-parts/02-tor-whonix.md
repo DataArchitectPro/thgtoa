@@ -26,7 +26,7 @@ This laptop should ideally be a clean, freshly installed laptop (running Windows
 
 - Пароли HDD/SSD в дополнение к паролям BIOS/UEFI.
 
-- Ноутбуки AMD могут быть более интересными, так как некоторые из них предоставляют возможность отключить AMD PSP (эквивалент AMD IME) из настроек BIOS/UEFI по умолчанию. И, поскольку AFAIK, AMD PSP был проверен и, вопреки IME, не было обнаружено каких-либо «злых» функций [^304]. Однако, если вы собираетесь использовать Qubes OS Route, рассмотрите Intel CPUs, поскольку Qubes OS не поддерживает AMD со своей системой защиты от злобы [^305].
+- Ноутбуки AMD могут быть более интересными, так как некоторые из них предоставляют возможность отключить AMD PSP (эквивалент AMD IME) из настроек BIOS/UEFI по умолчанию. И, поскольку AFAIK, AMD PSP был проверен и, вопреки IME, не было обнаружено каких-либо «злых» функций. Однако, если вы собираетесь использовать Qubes OS Route, рассмотрите Intel CPUs, поскольку Qubes OS не поддерживает AMD со своей системой защиты от злобы.[^304][^305]
 
 - Secure Wipe tools from the BIOS (особенно полезно для дисков SSD/NVMe, см. [BIOS/UEFI options to wipe disks in various Brands](#bios-disk-wipe-options)).
 
@@ -44,7 +44,7 @@ This laptop should ideally be a clean, freshly installed laptop (running Windows
 
 #### PC { #bios-pc }
 
-Доступ к этим настройкам можно получить через меню загрузки вашего ноутбука. Вот хороший учебник от HP, объясняющий все способы доступа к BIOS на различных компьютерах: <https://store.hp.com/us/en/tech-takes/how-to-enter-bios-setup-windows-pcs> <sup> [[Archive.org]](https://web.archive.org/web/https://store.hp.com/us/en/tech-takes/how-to-enter-bios-setup-windows-pcs)</sup>
+Доступ к этим настройкам можно получить через меню загрузки вашего ноутбука. Вот хороший учебник от HP, объясняющий все способы доступа к BIOS на различных компьютерах: <https://store.hp.com/us/en/tech-takes/how-to-enter-bios-setup-windows-pcs> <sup>[[Archive.org]](https://web.archive.org/web/https://store.hp.com/us/en/tech-takes/how-to-enter-bios-setup-windows-pcs)</sup>
 
 Обычно доступ к нему можно получить, нажав определенную клавишу (F1, F2 или Del) при загрузке (перед OS).
 
@@ -74,7 +74,7 @@ This laptop should ideally be a clean, freshly installed laptop (running Windows
 
 - Отключите AMD PSP, если можете (эквивалент AMD IME, см. [Your CPU](#cpu))
 
-- Отключите Secure Boot, если вы собираетесь использовать Qubes OS, так как они не поддерживают его из коробки [^306]. Держите его включенным, если вы собираетесь использовать Linux/Windows.
+- Отключите Secure Boot, если вы собираетесь использовать Qubes OS, так как они не поддерживают его из коробки. Держите его включенным, если вы собираетесь использовать Linux/Windows.[^306]
 
 - Проверьте, есть ли на вашем ноутбуке BIOS опция безопасного стирания для вашего HDD/SSD, которая может быть удобной в случае необходимости.
 
@@ -82,9 +82,9 @@ This laptop should ideally be a clean, freshly installed laptop (running Windows
 
 ##### О безопасной загрузке { #secure-boot }
 
-Итак, что такое Secure Boot[^307]? Короче говоря, это функция безопасности UEFI, предназначенная для предотвращения загрузки операционной системы, с которой загрузчик не был подписан определенными ключами, хранящимися в прошивке UEFI вашего ноутбука.
+Итак, что такое Secure Boot? Короче говоря, это функция безопасности UEFI, предназначенная для предотвращения загрузки операционной системы, с которой загрузчик не был подписан определенными ключами, хранящимися в прошивке UEFI вашего ноутбука.[^307]
 
-Когда операционная система (или загрузчик [^308]) поддерживает его, вы можете хранить ключи вашего загрузчика в прошивке UEFI, и это предотвратит загрузку любой несанкционированной операционной системы (например, OS USB или чего-либо подобного).
+Когда операционная система (или загрузчик) поддерживает его, вы можете хранить ключи вашего загрузчика в прошивке UEFI, и это предотвратит загрузку любой несанкционированной операционной системы (например, OS USB или чего-либо подобного).[^308]
 
 Настройки Secure Boot защищены паролем, который вы установили для доступа к настройкам BIOS/UEFI. Если у вас есть этот пароль, вы можете отключить Secure Boot и разрешить загрузку неподписанного OSes в вашей системе. Это может помочь смягчить некоторые атаки Злой горничной (объясняется далее в этом руководстве).
 
@@ -126,11 +126,11 @@ This laptop should ideally be a clean, freshly installed laptop (running Windows
 
 ### Физически защитите свой ноутбук { #tamper-protection }
 
-В какой-то момент вы неизбежно оставите этот ноутбук в покое. Вы не будете спать с ним и носить его повсюду каждый день. Вы должны сделать так, чтобы никто не мог вмешаться, не заметив этого. Это в основном полезно против некоторых ограниченных противников, которые не будут использовать гаечный ключ на 5 $ против вас[^11].
+В какой-то момент вы неизбежно оставите этот ноутбук в покое. Вы не будете спать с ним и носить его повсюду каждый день. Вы должны сделать так, чтобы никто не мог вмешаться, не заметив этого. Это в основном полезно против некоторых ограниченных противников, которые не будут использовать гаечный ключ на 5 $ против вас.[^11]
 
 Важно знать, что некоторым специалистам тривиально легко установить в ноутбук регистратор ключей или просто сделать клонированную копию жесткого диска, которая впоследствии может позволить им обнаружить наличие в нем зашифрованных данных с помощью криминалистических методов (подробнее об этом позже).
 
-Вот хороший дешевый способ сделать ваш ноутбук защищенным от несанкционированного доступа с помощью лака для ногтей (с блестками) <https://mullvad.net/en/help/how-tamper-protect-laptop/><sup> [[Archive.org]](https://web.archive.org/web/https://mullvad.net/en/help/how-tamper-protect-laptop/)</sup> [^309] (с фотографиями).
+Вот хороший дешевый способ сделать ваш ноутбук защищенным от несанкционированного доступа с помощью лака для ногтей (с блестками) <https://mullvad.net/en/help/how-tamper-protect-laptop/><sup>[[Archive.org]](https://web.archive.org/web/https://mullvad.net/en/help/how-tamper-protect-laptop/)</sup> (с фотографиями).[^309]
 
 While this is a good cheap method, it could also raise suspicions as it is quite "noticeable" and might just reveal that you "have something to hide". So, there are more subtle ways of achieving the same result. You could also for instance make a close-up macro photography of the back screws of your laptop or just use a small amount of candle wax within one of the screws that could just look like usual dirt. You could then check for tampering by comparing the photographs of the screws with new ones. Their orientation might have changed a bit if your adversary was not careful enough (Tightening them exactly the same way they were before). Or the wax within the bottom of a screw head might have been damaged compared to before.
 
@@ -148,7 +148,7 @@ While this is a good cheap method, it could also raise suspicions as it is quite
 
 ### Выбираем ваш Host OS { #host-os-choice }
 
-Этот маршрут будет широко использовать Virtual Machines[^310], им потребуется хост OS для запуска программного обеспечения виртуализации. В этой части руководства есть три рекомендуемых варианта:
+Этот маршрут будет широко использовать Virtual Machines, им потребуется хост OS для запуска программного обеспечения виртуализации. В этой части руководства есть три рекомендуемых варианта:[^310]
 
 - Ваше распределение Linux по выбору (за исключением Qubes OS)
 
@@ -158,11 +158,11 @@ While this is a good cheap method, it could also raise suspicions as it is quite
 
 Кроме того, высока вероятность того, что ваш Mac привязан или был привязан к учетной записи Apple (во время покупки или после входа в систему), и поэтому его уникальные аппаратные идентификаторы могут привести к вам в случае утечки аппаратных идентификаторов.
 
-Linux is also not necessarily the best choice for anonymity depending on your threat model. This is because using Windows will allow us to **conveniently** use Plausible Deniability[^311] (aka Deniable Encryption[^312]) easily at the OS level. Windows is also unfortunately at the same time a privacy nightmare[^313] but is the only easy to set up option for using OS-wide plausible deniability. Windows telemetry and telemetry blocking are also widely documented which should mitigate many issues.
+Linux is also not necessarily the best choice for anonymity depending on your threat model. This is because using Windows will allow us to **conveniently** use Plausible Deniability (aka Deniable Encryption) easily at the OS level. Windows is also unfortunately at the same time a privacy nightmare but is the only easy to set up option for using OS-wide plausible deniability. Windows telemetry and telemetry blocking are also widely documented which should mitigate many issues.[^311][^312][^313]
 
-**Итак, что такое правдоподобное отрицание?** Вы можете сотрудничать со злоумышленником, запрашивающим доступ к вашему устройству/данным, не раскрывая свой истинный секрет. Все это с помощью Deniable Encryption[^314].
+**Итак, что такое правдоподобное отрицание?** Вы можете сотрудничать со злоумышленником, запрашивающим доступ к вашему устройству/данным, не раскрывая свой истинный секрет. Все это с помощью Deniable Encryption.[^314]
 
-Мягкий законный злоумышленник может запросить пароль от вашего зашифрованного ноутбука. Сначала вы могли отказаться выдавать какой-либо пароль (используя свое «право хранить молчание», «право не свидетельствовать против себя»), но некоторые страны применяют законы [^315] '[^316], чтобы освободить это от таких прав (потому что террористы и «думают о детях»). В этом случае вам, возможно, придется раскрыть пароль или вам грозит тюремное заключение за неуважение к суду. Именно здесь вступает в игру правдоподобное отрицание.
+Мягкий законный злоумышленник может запросить пароль от вашего зашифрованного ноутбука. Сначала вы могли отказаться выдавать какой-либо пароль (используя свое «право хранить молчание», «право не свидетельствовать против себя»), но некоторые страны применяют законы ', чтобы освободить это от таких прав (потому что террористы и «думают о детях»). В этом случае вам, возможно, придется раскрыть пароль или вам грозит тюремное заключение за неуважение к суду. Именно здесь вступает в игру правдоподобное отрицание.[^315][^316]
 
 You could then reveal a password, but that password will only give access to "plausible data" (a decoy OS). The forensics will be well aware that it is possible for you to have hidden data but should not be able to prove this **(if you do this right)**. You will have cooperated, and the investigators will have access to something but not what you actually want to hide. Since the burden of proof should lie on their side, they will have no options but to believe you unless they have proof that you have hidden data.
 
@@ -170,7 +170,7 @@ You could then reveal a password, but that password will only give access to "pl
 
 This also means you could set up your own advanced "plausible deniability" setup using any Host OS by storing for instance Virtual Machines on a Veracrypt hidden volume container (be careful of traces in the Host OS tho that would need to be cleaned if the host OS is persistent, see [Some additional measures against forensics](#anti-forensics) section later). There is a project for achieving this within Tails (<https://github.com/aforensics/HiddenVM> <sup>[[Archive.org]](https://web.archive.org/web/https://github.com/aforensics/HiddenVM)</sup>) which would make your Host OS non-persistent and use plausible deniability within Tails.
 
-In the case of Windows, plausible deniability is also the reason you should ideally have Windows 10/11 Home (and not Pro). This is because Windows 10/11 Pro natively offers a full-disk encryption system (Bitlocker[^317]) where Windows 10/11 Home offers no full-disk encryption at all. You will later use third-party open-source software for encryption that will allow full-disk encryption on Windows 10/11 Home. This will give you a good (plausible) excuse to use this software. While using this software on Windows 10/11 Pro would be suspicious.
+In the case of Windows, plausible deniability is also the reason you should ideally have Windows 10/11 Home (and not Pro). This is because Windows 10/11 Pro natively offers a full-disk encryption system (Bitlocker) where Windows 10/11 Home offers no full-disk encryption at all. You will later use third-party open-source software for encryption that will allow full-disk encryption on Windows 10/11 Home. This will give you a good (plausible) excuse to use this software. While using this software on Windows 10/11 Pro would be suspicious.[^317]
 
 **Примечание о Linux:** Итак, как насчет Linux и правдоподобного отрицания? Да, с Linux также можно добиться правдоподобного отрицания. Более подробная информация приведена в разделе Linux Host OS позже.
 
@@ -184,11 +184,11 @@ In the case of Windows, plausible deniability is also the reason you should idea
 
 Правдоподобное отрицание эффективно только против мягких законных противников, которые не будут прибегать к физическим средствам. **По возможности избегайте использования программного обеспечения, допускающего правдоподобное отрицание (например, Veracrypt), если ваша модель угроз включает в себя жестких противников. Таким образом, пользователи Windows должны в этом случае установить Windows Pro в качестве Host OS и вместо этого использовать Bitlocker.**
 
-См. <https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis><sup> [[Wikiless]](https://wikiless.tiekoetter.com/wiki/Rubber-hose_cryptanalysis)</sup> <sup>[[Archive.org]](https://web.archive.org/web/https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis)</sup>
+См. <https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis><sup>[[Wikiless]](https://wikiless.tiekoetter.com/wiki/Rubber-hose_cryptanalysis)</sup> <sup>[[Archive.org]](https://web.archive.org/web/https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis)</sup>
 
 ##### Атака злой горничной { #evil-maid-attack }
 
-Evil Maid Attacks[^318] are conducted when someone tampers with your laptop while you are away. To install to clone your hard drive, install malware or a key logger. If they can clone your hard drive, they can compare one image of your hard drive at the time they took it while you were away with the hard drive when they seize it from you. If you used the laptop again in between, forensics examiners might be able to prove the existence of the hidden data by looking at the variations between the two images in what should be an empty/unused space. This could lead to compelling evidence of the existence of hidden data. If they install a key logger or malware within your laptop (software or hardware), they will be able to simply get the password from you for later use when they seize it. Such attacks can be done at your home, your hotel, a border crossing, or anywhere you leave your devices unattended.
+Evil Maid Attacks are conducted when someone tampers with your laptop while you are away. To install to clone your hard drive, install malware or a key logger. If they can clone your hard drive, they can compare one image of your hard drive at the time they took it while you were away with the hard drive when they seize it from you. If you used the laptop again in between, forensics examiners might be able to prove the existence of the hidden data by looking at the variations between the two images in what should be an empty/unused space. This could lead to compelling evidence of the existence of hidden data. If they install a key logger or malware within your laptop (software or hardware), they will be able to simply get the password from you for later use when they seize it. Such attacks can be done at your home, your hotel, a border crossing, or anywhere you leave your devices unattended.[^318]
 
 Вы можете смягчить эту атаку, выполнив следующие действия (как рекомендовано ранее):
 
@@ -202,11 +202,11 @@ Evil Maid Attacks[^318] are conducted when someone tampers with your laptop whil
 
 ##### Атака холодным ботинком { #cold-boot-attack }
 
-Атаки холодной загрузки [^319] сложнее, чем атака Злой горничной, но могут быть частью атаки Злой горничной, поскольку для этого требуется, чтобы противник завладел вашим ноутбуком, пока вы активно используете свое устройство или вскоре после этого.
+Атаки холодной загрузки сложнее, чем атака Злой горничной, но могут быть частью атаки Злой горничной, поскольку для этого требуется, чтобы противник завладел вашим ноутбуком, пока вы активно используете свое устройство или вскоре после этого.[^319]
 
-The idea is rather simple, as shown in this video[^320], an adversary could theoretically quickly boot your device on a special USB key that would copy the content of the RAM (the memory) of the device after you shut it down. If the USB ports are disabled or if they feel like they need more time, they could open it and "cool down" the memory using a spray or other chemicals (liquid nitrogen for instance) preventing the memory from decaying. They could then be able to copy its content for analysis. This memory dump could contain the key to decrypt your device. You will later apply a few principles to mitigate these.
+The idea is rather simple, as shown in this video, an adversary could theoretically quickly boot your device on a special USB key that would copy the content of the RAM (the memory) of the device after you shut it down. If the USB ports are disabled or if they feel like they need more time, they could open it and "cool down" the memory using a spray or other chemicals (liquid nitrogen for instance) preventing the memory from decaying. They could then be able to copy its content for analysis. This memory dump could contain the key to decrypt your device. You will later apply a few principles to mitigate these.[^320]
 
-В случае правдоподобного отрицания было проведено несколько криминалистических исследований [^321] о техническом доказательстве наличия скрытых данных с помощью простой криминалистической экспертизы (без атаки Cold Boot/Evil Maid), но они были оспорены другими исследованиями [^322] и сопровождающим VeracryptZPROT2QQ, поэтому мы пока не будем слишком беспокоиться о них.
+В случае правдоподобного отрицания было проведено несколько криминалистических исследований о техническом доказательстве наличия скрытых данных с помощью простой криминалистической экспертизы (без атаки Cold Boot/Evil Maid), но они были оспорены другими исследованиями и сопровождающим Veracrypt, поэтому мы пока не будем слишком беспокоиться о них.[^321][^322][^323]
 
 Те же меры, которые используются для смягчения атак Evil Maid, должны быть приняты для атак Cold Boot с некоторыми дополнительными:
 
@@ -214,13 +214,13 @@ The idea is rather simple, as shown in this video[^320], an adversary could theo
 
 - Включите опцию Протирать ключи из памяти, если устройство вставлено в Veracrypt.
 
-- Вы должны ограничить использование режима ожидания Sleep и вместо этого использовать Shutdown или Hibernate, чтобы ключи шифрования не оставались в RAM, когда ваш компьютер переходит в спящий режим. Это связано с тем, что сон будет поддерживать силу в вашей памяти для более быстрого возобновления вашей деятельности. Только спящий режим и выключение фактически очистят ключ из памяти [^324].
+- Вы должны ограничить использование режима ожидания Sleep и вместо этого использовать Shutdown или Hibernate, чтобы ключи шифрования не оставались в RAM, когда ваш компьютер переходит в спящий режим. Это связано с тем, что сон будет поддерживать силу в вашей памяти для более быстрого возобновления вашей деятельности. Только спящий режим и выключение фактически очистят ключ из памяти.[^324]
 
-См. также [Защита от атаки холодным ботинком](https://www.whonix.org/wiki/Cold_Boot_Attack_Defense) <sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Cold_Boot_Attack_Defense)</sup> и [Защита от физических атак](https://www.whonix.org/wiki/Protection_Against_Physical_Attacks) <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Protection_Against_Physical_Attacks)</sup>.
+См. также [Защита от атаки холодным ботинком](https://www.whonix.org/wiki/Cold_Boot_Attack_Defense) <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Cold_Boot_Attack_Defense)</sup> и [Защита от физических атак](https://www.whonix.org/wiki/Protection_Against_Physical_Attacks) <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Protection_Against_Physical_Attacks)</sup>.
 
 Вот также некоторые интересные инструменты, которые следует учитывать пользователям Linux для защиты от них:
 
-- <https://github.com/0xPoly/Centry> <sup>[[Archive.org]](https://web.archive.org/web/https://github.com/0xPoly/Centry) </sup>(к сожалению, не поддерживается)
+- <https://github.com/0xPoly/Centry> <sup>[[Archive.org]](https://web.archive.org/web/https://github.com/0xPoly/Centry)</sup>(к сожалению, не поддерживается)
 
 - <https://github.com/hephaest0s/usbkill> <sup>[[Archive.org]](https://web.archive.org/web/https://github.com/hephaest0s/usbkill)</sup> (к сожалению, также не поддерживается)
 
@@ -250,17 +250,17 @@ If you want better security, you should shut down your laptop completely every t
 
 ###### Windows { #host-local-leaks-windows }
 
-- Windows ShellBags, которые хранятся в реестре Windows, тихо сохраняя различные истории доступных томов/файлов/папок[^325].
+- Windows ShellBags, которые хранятся в реестре Windows, тихо сохраняя различные истории доступных томов/файлов/папок.[^325]
 
-- Windows Индексирование следов файлов, присутствующих в папке пользователя по умолчанию [^326].
+- Windows Индексирование следов файлов, присутствующих в папке пользователя по умолчанию.[^326]
 
-- Последние списки (aka Jump Lists) в Windows и различных приложениях, хранящих следы недавно просмотренных документов [^327].
+- Последние списки (aka Jump Lists) в Windows и различных приложениях, хранящих следы недавно просмотренных документов.[^327]
 
-- Еще много следов в различных журналах, пожалуйста, посмотрите этот удобный интересный плакат для получения дополнительной информации: <https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download><sup> [[Archive.org]](https://web.archive.org/web/https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download)</sup>
+- Еще много следов в различных журналах, пожалуйста, посмотрите этот удобный интересный плакат для получения дополнительной информации: <https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download><sup>[[Archive.org]](https://web.archive.org/web/https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download)</sup>
 
 ###### macOS { #host-local-leaks-macos }
 
-- Gatekeeper[^328] и XProtect отслеживают историю загрузок в локальной базе данных и атрибуты файлов.
+- Gatekeeper и XProtect отслеживают историю загрузок в локальной базе данных и атрибуты файлов.[^328]
 
 - Индексация Spotlight
 
@@ -316,7 +316,7 @@ If you want better security, you should shut down your laptop completely every t
 
 Я также рекомендую выполнить первоначальную установку полностью в автономном режиме, чтобы избежать утечки данных.
 
-Вы всегда должны помнить, что, несмотря на репутацию, основные дистрибутивы Linux (например, Ubuntu) не обязательно лучше защищены, чем другие системы, такие как macOS и Windows. См. эту ссылку, чтобы понять, почему <https://madaidans-insecurities.github.io/linux.html><sup> [[Archive.org]](https://web.archive.org/web/https://madaidans-insecurities.github.io/linux.html)</sup>.
+Вы всегда должны помнить, что, несмотря на репутацию, основные дистрибутивы Linux (например, Ubuntu) не обязательно лучше защищены, чем другие системы, такие как macOS и Windows. См. эту ссылку, чтобы понять, почему <https://madaidans-insecurities.github.io/linux.html><sup>[[Archive.org]](https://web.archive.org/web/https://madaidans-insecurities.github.io/linux.html)</sup>.
 
 #### Полное шифрование диска { #linux-fde }
 
@@ -326,7 +326,7 @@ If you want better security, you should shut down your laptop completely every t
 
     - Без правдоподобного отрицания:
 
-        + (Рекомендуется и легко) Шифровать в процессе установки: <https://ubuntu.com/tutorials/install-ubuntu-desktop> <sup> [[Archive.org]](https://web.archive.org/web/https://ubuntu.com/tutorials/install-ubuntu-desktop)</sup>
+        + (Рекомендуется и легко) Шифровать в процессе установки: <https://ubuntu.com/tutorials/install-ubuntu-desktop> <sup>[[Archive.org]](https://web.archive.org/web/https://ubuntu.com/tutorials/install-ubuntu-desktop)</sup>
 
             * Этот процесс требует полного стирания всего накопителя (чистая установка).
 
@@ -344,7 +344,7 @@ If you want better security, you should shut down your laptop completely every t
 
 #### Примечание о правдоподобном отрицании на Linux { #linux-deniability-note }
 
-Существует несколько способов достижения правдоподобного отрицания на Linux[^329], и это возможно. Вот более подробная информация о некоторых способах, которые мы рекомендуем. Все эти варианты требуют некоторого более высокого уровня навыков использования Linux.
+Существует несколько способов достижения правдоподобного отрицания на Linux, и это возможно. Вот более подробная информация о некоторых способах, которые мы рекомендуем. Все эти варианты требуют некоторого более высокого уровня навыков использования Linux.[^329]
 
 ##### The Detached Headers Way { #detached-headers }
 
@@ -366,11 +366,11 @@ If you want better security, you should shut down your laptop completely every t
 
 #### Отключите все ненужное { #linux-disable-unnecessary }
 
-- Отключите Bluetooth, если он включен, следуя этому руководству<https://www.addictivetips.com/ubuntu-linux-tips/disable-bluetooth-in-ubuntu/> <sup> [[Archive.org]](https://web.archive.org/web/https://www.addictivetips.com/ubuntu-linux-tips/disable-bluetooth-in-ubuntu/) </sup> или выполнив следующую команду:
+- Отключите Bluetooth, если он включен, следуя этому руководству<https://www.addictivetips.com/ubuntu-linux-tips/disable-bluetooth-in-ubuntu/> <sup>[[Archive.org]](https://web.archive.org/web/https://www.addictivetips.com/ubuntu-linux-tips/disable-bluetooth-in-ubuntu/)</sup> или выполнив следующую команду:
 
     - ```sudo systemctl disable bluetooth.service --force```
 
-- Отключите индексирование, если оно включено по умолчанию (Ubuntu >19.04), следуя этому руководству <https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html><sup> [[Archive.org]](https://web.archive.org/web/https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html) </sup> или выполнив следующие команды:
+- Отключите индексирование, если оно включено по умолчанию (Ubuntu >19.04), следуя этому руководству <https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html><sup>[[Archive.org]](https://web.archive.org/web/https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html)</sup> или выполнив следующие команды:
 
     - ```sudo systemctl --user mask tracker-store.service tracker-miner-fs.service tracker-miner-rss.service tracker-extract.service tracker-miner-apps.service tracker-writeback.service```
 
@@ -390,17 +390,17 @@ As explained previously, you should not use the sleep features but shut down or 
 
 - <https://blog.ivansmirnov.name/how-to-set-up-hibernate-on-ubuntu-20-04/> <sup>[[Archive.org]](https://web.archive.org/web/20211011215449/https://blog.ivansmirnov.name/how-to-set-up-hibernate-on-ubuntu-20-04/)</sup>
 
-После включения Hibernate измените поведение так, чтобы ваш ноутбук впадал в спящий режим при закрытии крышки, следуя этому уроку для Ubuntu 20.04 <http://ubuntuhandbook.org/index.php/2020/05/lid-close-behavior-ubuntu-20-04/> <sup> [[Archive.org]](https://web.archive.org/web/http://ubuntuhandbook.org/index.php/2020/05/lid-close-behavior-ubuntu-20-04/) </sup> и этому уроку для Ubuntu 18.04 <https://tipsonubuntu.com/2018/04/28/change-lid-close-action-ubuntu-18-04-lts/> <sup> [[Archive.org]](https://web.archive.org/web/https://tipsonubuntu.com/2018/04/28/change-lid-close-action-ubuntu-18-04-lts/)</sup>. Учебника по Ubuntu 21.04 или 21.10 пока нет, но вышеизложенное для 20.04, вероятно, тоже должно сработать.
+После включения Hibernate измените поведение так, чтобы ваш ноутбук впадал в спящий режим при закрытии крышки, следуя этому уроку для Ubuntu 20.04 <http://ubuntuhandbook.org/index.php/2020/05/lid-close-behavior-ubuntu-20-04/> <sup>[[Archive.org]](https://web.archive.org/web/http://ubuntuhandbook.org/index.php/2020/05/lid-close-behavior-ubuntu-20-04/)</sup> и этому уроку для Ubuntu 18.04 <https://tipsonubuntu.com/2018/04/28/change-lid-close-action-ubuntu-18-04-lts/> <sup>[[Archive.org]](https://web.archive.org/web/https://tipsonubuntu.com/2018/04/28/change-lid-close-action-ubuntu-18-04-lts/)</sup>. Учебника по Ubuntu 21.04 или 21.10 пока нет, но вышеизложенное для 20.04, вероятно, тоже должно сработать.
 
-К сожалению, это не очистит ключ из памяти непосредственно при спящем режиме. Чтобы избежать этого ценой некоторой производительности, вы можете рассмотреть возможность шифрования файла подкачки, следуя этому руководству: <https://help.ubuntu.com/community/EnableHibernateWithEncryptedSwap> <sup> [[Archive.org]](https://web.archive.org/web/https://help.ubuntu.com/community/EnableHibernateWithEncryptedSwap)</sup>
+К сожалению, это не очистит ключ из памяти непосредственно при спящем режиме. Чтобы избежать этого ценой некоторой производительности, вы можете рассмотреть возможность шифрования файла подкачки, следуя этому руководству: <https://help.ubuntu.com/community/EnableHibernateWithEncryptedSwap> <sup>[[Archive.org]](https://web.archive.org/web/https://help.ubuntu.com/community/EnableHibernateWithEncryptedSwap)</sup>
 
 Эти настройки должны смягчать атаки холодной загрузки, если вы можете достаточно быстро перейти в спящий режим.
 
 #### Включить рандомизацию адресов MAC { #linux-mac-randomization }
 
-- Для Ubuntu выполните следующие действия <https://help.ubuntu.com/community/AnonymizingNetworkMACAddresses> <sup> [[Archive.org]](https://web.archive.org/web/https://help.ubuntu.com/community/AnonymizingNetworkMACAddresses)</sup>.
+- Для Ubuntu выполните следующие действия <https://help.ubuntu.com/community/AnonymizingNetworkMACAddresses> <sup>[[Archive.org]](https://web.archive.org/web/https://help.ubuntu.com/community/AnonymizingNetworkMACAddresses)</sup>.
 
-- Рассмотрим это руководство, которое все еще должно работать: <https://josh.works/shell-script-basics-change-mac-address><sup> [[Archive.org]](https://web.archive.org/web/https://josh.works/shell-script-basics-change-mac-address)</sup>
+- Рассмотрим это руководство, которое все еще должно работать: <https://josh.works/shell-script-basics-change-mac-address><sup>[[Archive.org]](https://web.archive.org/web/https://josh.works/shell-script-basics-change-mac-address)</sup>
 
 #### Закалка Linux { #hardening-linux }
 
@@ -410,9 +410,9 @@ As explained previously, you should not use the sleep features but shut down or 
 
 - Это отличное руководство: <https://madaidans-insecurities.github.io/guides/linux-hardening.html> <sup>[[Archive.org]](https://web.archive.org/web/https://madaidans-insecurities.github.io/guides/linux-hardening.html)</sup>
 
-- Этот отличный вики-ресурс: <https://wiki.archlinux.org/title/Security> <sup> [[Archive.org]](https://web.archive.org/web/https://wiki.archlinux.org/title/Security)</sup>
+- Этот отличный вики-ресурс: <https://wiki.archlinux.org/title/Security> <sup>[[Archive.org]](https://web.archive.org/web/https://wiki.archlinux.org/title/Security)</sup>
 
-- Эти отличные скрипты основаны на руководстве и вики выше: <https://codeberg.org/SalamanderSecurity/PARSEC> <sup> [[Archive.org]](https://web.archive.org/web/https://codeberg.org/SalamanderSecurity/PARSEC)</sup>
+- Эти отличные скрипты основаны на руководстве и вики выше: <https://codeberg.org/SalamanderSecurity/PARSEC> <sup>[[Archive.org]](https://web.archive.org/web/https://codeberg.org/SalamanderSecurity/PARSEC)</sup>
 
 - Эти инструменты, которые могут помочь вам укрепить ваш Linux Kernel:
 
@@ -420,7 +420,7 @@ As explained previously, you should not use the sleep features but shut down or 
 
     - Kconfig-hardened-check: <https://github.com/a13xp0p0v/kconfig-hardened-check>
 
-- Рассмотрите возможность установки Safing Portmaster из <https://safing.io/portmaster/><sup> [[Archive.org]](https://web.archive.org/web/https://safing.io/portmaster/) </sup>* *(Предупреждение: могут возникнуть проблемы с некоторыми клиентами VPN. См.:<https://docs.safing.io/portmaster/install/status/vpn-compatibility>* *<sup> [[Archive.org]](https://web.archive.org/web/https://docs.safing.io/portmaster/install/status/vpn-compatibility)</sup>
+- Рассмотрите возможность установки Safing Portmaster из <https://safing.io/portmaster/><sup>[[Archive.org]](https://web.archive.org/web/https://safing.io/portmaster/)</sup>* *(Предупреждение: могут возникнуть проблемы с некоторыми клиентами VPN. См.:<https://docs.safing.io/portmaster/install/status/vpn-compatibility>* *<sup>[[Archive.org]](https://web.archive.org/web/https://docs.safing.io/portmaster/install/status/vpn-compatibility)</sup>
 
 - Рассмотрите возможность использования KickSecure при использовании Debian: [Kicksecure](https://www.whonix.org/wiki/Kicksecure) <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Kicksecure)</sup>
 
@@ -454,7 +454,7 @@ As explained previously, you should not use the sleep features but shut down or 
 
 В качестве легкого введения для новых пользователей macOS рассмотрим <https://www.youtube.com/watch?v=lFx5icuE6Io> <sup>[[Invidious]](https://yewtu.be/watch?v=lFx5icuE6Io)</sup>
 
-Теперь, чтобы углубиться в обеспечение и укрепление вашего macOS, мы рекомендуем прочитать это руководство, которое охватывает многие вопросы: <https://www.bejarano.io/hardening-macos/> <sup> [[Archive.org]](https://web.archive.org/web/https://www.bejarano.io/hardening-macos/)</sup>
+Теперь, чтобы углубиться в обеспечение и укрепление вашего macOS, мы рекомендуем прочитать это руководство, которое охватывает многие вопросы: <https://www.bejarano.io/hardening-macos/> <sup>[[Archive.org]](https://web.archive.org/web/https://www.bejarano.io/hardening-macos/)</sup>
 
 Вот основные шаги, которые вы должны предпринять после установки в автономном режиме:
 
@@ -462,7 +462,7 @@ As explained previously, you should not use the sleep features but shut down or 
 
 Во-первых, вы должны установить пароль прошивки, следуя этому руководству от Apple: <https://support.apple.com/en-us/HT204455> <sup>[[Archive.org]](https://web.archive.org/web/https://support.apple.com/en-us/HT204455)</sup>
 
-К сожалению, некоторые атаки все еще возможны, и злоумышленник может отключить этот пароль, поэтому вы также должны следовать этому руководству, чтобы предотвратить отключение пароля прошивки от кого-либо, включая Apple: <https://support.apple.com/en-gb/guide/security/sec28382c9ca/web><sup> [[Archive.org]](https://web.archive.org/web/https://support.apple.com/en-gb/guide/security/sec28382c9ca/web)</sup>
+К сожалению, некоторые атаки все еще возможны, и злоумышленник может отключить этот пароль, поэтому вы также должны следовать этому руководству, чтобы предотвратить отключение пароля прошивки от кого-либо, включая Apple: <https://support.apple.com/en-gb/guide/security/sec28382c9ca/web><sup>[[Archive.org]](https://web.archive.org/web/https://support.apple.com/en-gb/guide/security/sec28382c9ca/web)</sup>
 
 ##### Включить спящий режим вместо сна { #macos-hibernation }
 
@@ -562,7 +562,7 @@ Again, this is to prevent some cold-boot and evil-maid attacks by powering down 
 
 ###### Если вы намерены использовать общесистемное правдоподобное отрицание { #windows-with-deniability }
 
-Veracrypt[^330] - это программное обеспечение, которое мы рекомендуем для полного шифрования диска, шифрования файлов и правдоподобного отрицания. Это форк известного, но устаревшего и не поддерживаемого TrueCrypt. Может использоваться для:
+Veracrypt - это программное обеспечение, которое мы рекомендуем для полного шифрования диска, шифрования файлов и правдоподобного отрицания. Это форк известного, но устаревшего и не поддерживаемого TrueCrypt. Может использоваться для:[^330]
 
 - Полное простое шифрование диска (ваш жесткий диск зашифрован одной парольной фразой).
 
@@ -572,17 +572,17 @@ Veracrypt[^330] - это программное обеспечение, кото
 
 - Контейнер файлов с правдоподобным отрицанием (это один и тот же большой файл, но в зависимости от парольной фразы, которую вы используете при его монтировании, вы можете смонтировать «скрытый том» или «том-приманку»).
 
-Насколько мне известно, это единственное (удобное и используемое кем угодно) бесплатное программное обеспечение с открытым исходным кодом и открытым аудитом [^331], которое также обеспечивает правдоподобное отрицание для широкого использования и работает с Windows Home Edition.
+Насколько мне известно, это единственное (удобное и используемое кем угодно) бесплатное программное обеспечение с открытым исходным кодом и открытым аудитом, которое также обеспечивает правдоподобное отрицание для широкого использования и работает с Windows Home Edition.[^331]
 
-Загрузите и установите Veracrypt из: <https://www.veracrypt.fr/en/Downloads.html> <sup> [[Archive.org]](https://web.archive.org/web/https://www.veracrypt.fr/en/Downloads.html)</sup>
+Загрузите и установите Veracrypt из: <https://www.veracrypt.fr/en/Downloads.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.veracrypt.fr/en/Downloads.html)</sup>
 
 После установки ознакомьтесь со следующими вариантами, которые помогут смягчить некоторые атаки:
 
-- Шифруйте память с помощью опции Veracrypt[^332] (настройки > параметры производительности/драйвера > шифровать RAM) по цене 5-15% производительности. Этот параметр также отключает спящий режим (который активно не очищает ключ при спящем режиме) и вместо этого полностью шифрует память, чтобы смягчить некоторые атаки с холодной загрузкой. Подробнее об этой функции здесь: <https://sourceforge.net/p/veracrypt/discussion/technical/thread/3961542951/> <sup>[[Archive.org]](https://web.archive.org/web/https://sourceforge.net/p/veracrypt/discussion/technical/thread/3961542951/)</sup>
+- Шифруйте память с помощью опции Veracrypt (настройки > параметры производительности/драйвера > шифровать RAM) по цене 5-15% производительности. Этот параметр также отключает спящий режим (который активно не очищает ключ при спящем режиме) и вместо этого полностью шифрует память, чтобы смягчить некоторые атаки с холодной загрузкой. Подробнее об этой функции здесь: <https://sourceforge.net/p/veracrypt/discussion/technical/thread/3961542951/> <sup>[[Archive.org]](https://web.archive.org/web/https://sourceforge.net/p/veracrypt/discussion/technical/thread/3961542951/)</sup>[^332]
 
 - Включите опцию Veracrypt, чтобы стереть ключи из памяти, если вставлено новое устройство (система > настройки > безопасность > очистить ключи из памяти, если вставлено новое устройство). Это может помочь в случае, если ваша система захвачена, пока она все еще включена (но заблокирована).
 
-- Включите опцию Veracrypt, чтобы монтировать тома как съемные тома (Настройки > Настройки > Монтировать том как съемный носитель). Это предотвратит запись Windows некоторых журналов о ваших монтированиях в журналах событий [^333] и предотвратит некоторые локальные утечки данных.
+- Включите опцию Veracrypt, чтобы монтировать тома как съемные тома (Настройки > Настройки > Монтировать том как съемный носитель). Это предотвратит запись Windows некоторых журналов о ваших монтированиях в журналах событий и предотвратит некоторые локальные утечки данных.[^333]
 
 - Будьте осторожны и будьте хорошо осведомлены о ситуации, если почувствуете что-то странное. Выключите ноутбук как можно быстрее.
 
@@ -624,9 +624,9 @@ Overview:
 
 - Теперь шифрование должно быть запущено в фоновом режиме (вы можете проверить, нажав на значок Bitlocker в нижней правой части панели задач).
 
-К сожалению, этого недостаточно. С помощью этой настройки ваш ключ Bitlocker может быть сохранен как есть в чипе TPM вашего компьютера. Это довольно проблематично, так как ключ может быть извлечен в некоторых случаях с помощью ease[^334] '[^335]'[^336] '[^337].
+К сожалению, этого недостаточно. С помощью этой настройки ваш ключ Bitlocker может быть сохранен как есть в чипе TPM вашего компьютера. Это довольно проблематично, так как ключ может быть извлечен в некоторых случаях с помощью ease '' '.[^334][^335][^336][^337]
 
-Чтобы смягчить это, вам придется включить еще несколько вариантов в соответствии с рекомендациями Microsoft[^338]:
+Чтобы смягчить это, вам придется включить еще несколько вариантов в соответствии с рекомендациями Microsoft:[^338]
 
 - Нажмите на значок Windows
 
@@ -776,9 +776,9 @@ Overview:
 
         + Требуется полная очистка ноутбука
 
-        + Не используется с диском SSD из-за требования отключения Trim[^339] Operations[^340]. Это со временем серьезно ухудшит производительность/работоспособность вашего накопителя SSD.
+        + Не используется с диском SSD из-за требования отключения Trim Operations. Это со временем серьезно ухудшит производительность/работоспособность вашего накопителя SSD.[^339][^340]
 
-**Как вы можете видеть, маршрут C предлагает только два преимущества конфиденциальности по сравнению с другими, и он будет полезен только против мягкого законного противника. Помните, что <https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis> ** <sup> [[Wikiless]](https://wikiless.tiekoetter.com/wiki/Rubber-hose_cryptanalysis) </sup><sup> [[Archive.org]](https://web.archive.org/web/https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis)</sup>**.**
+**Как вы можете видеть, маршрут C предлагает только два преимущества конфиденциальности по сравнению с другими, и он будет полезен только против мягкого законного противника. Помните, что <https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis> ** <sup>[[Wikiless]](https://wikiless.tiekoetter.com/wiki/Rubber-hose_cryptanalysis)</sup><sup>[[Archive.org]](https://web.archive.org/web/https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis)</sup>**.**
 
 Выбор маршрута зависит от вас. Маршрут А - минимальный.
 
@@ -822,13 +822,13 @@ Overview:
 
 - Нажмите Next (Далее) в качестве экрана Generated Keys (Сгенерированные клю
 
-- Спасать или не спасать disk[^341] - решать вам. Мы рекомендуем сделать один (на всякий случай), просто убедитесь, что он хранится за пределами вашего зашифрованного диска (например, ключ USB или подождите и посмотрите конец этого руководства для руководства по безопасному резервному копированию). Этот диск спасения не будет хранить вашу кодовую фразу, и она все равно понадобится вам для ее использования.
+- Спасать или не спасать disk - решать вам. Мы рекомендуем сделать один (на всякий случай), просто убедитесь, что он хранится за пределами вашего зашифрованного диска (например, ключ USB или подождите и посмотрите конец этого руководства для руководства по безопасному резервному копированию). Этот диск спасения не будет хранить вашу кодовую фразу, и она все равно понадобится вам для ее использования.[^341]
 
 - Режим протирания:
 
     - Если у вас еще нет конфиденциальных данных на этом ноутбуке, выберите Ԥ
 
-    - Если у вас есть конфиденциальные данные на SSD, только Trim должен позаботиться об этом[^342], но мы рекомендуем один проход (случайные данные), чтобы быть уверенным.
+    - Если у вас есть конфиденциальные данные на SSD, только Trim должен позаботиться об этом, но мы рекомендуем один проход (случайные данные), чтобы быть уверенным.[^342]
 
     - Если у вас есть конфиденциальные данные на HDD, Trim отсутствует, и мы рекомендуем пройти хотя бы 1 проход.
 
@@ -850,7 +850,7 @@ Overview:
 
 **Ваш скрытый OS не должен быть активирован (с ключом продукта MS). Поэтому этот маршрут порекомендует и проведет вас через полную чистую установку, которая сотрет все на вашем ноутбуке.**
 
-Ознакомьтесь с документацией Veracrypt <https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html)</sup> (Процесс создания части скрытой операционной системы) и <https://www.veracrypt.fr/en/Security%20Requirements%20for%20Hidden%20Volumes.html> <sup> [[Archive.org]](https://web.archive.org/web/https://www.veracrypt.fr/en/Security%20Requirements%20for%20Hidden%20Volumes.html) </sup> (Требования безопасности и меры предосторожности, относящиеся к скрытым томам).
+Ознакомьтесь с документацией Veracrypt <https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html)</sup> (Процесс создания части скрытой операционной системы) и <https://www.veracrypt.fr/en/Security%20Requirements%20for%20Hidden%20Volumes.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.veracrypt.fr/en/Security%20Requirements%20for%20Hidden%20Volumes.html)</sup> (Требования безопасности и меры предосторожности, относящиеся к скрытым томам).
 
 Вот как будет выглядеть ваша система после завершения этого процесса:
 
@@ -876,7 +876,7 @@ Overview:
 
 - Это означает, что ваш текущий Windows 10/11 станет скрытым Windows 10/11 и что вам нужно будет переустановить свежую приманку Windows 10/11 OS.
 
-**Mandatory if you have an SSD drive and you still want to do this against the recommendation: Disable SSD Trim in Windows**[^343] **(again this is NOT recommended at all as** **disabling Trim in itself is highly suspicious**). **Also** **as mentioned earlier, disabling Trim will reduce the lifetime of your SSD drive and will significantly impact its performance over time (your laptop will become slower and slower over several months of use until it becomes almost unusable, you will then have to clean the drive and re-install everything). But you must do it to prevent data leaks**[^344] **that could allow forensics to defeat your plausible deniability**[^345][^346]**. The only way around this at the moment is to have a laptop with a classic HDD drive instead.**
+**Mandatory if you have an SSD drive and you still want to do this against the recommendation: Disable SSD Trim in Windows** **(again this is NOT recommended at all as** **disabling Trim in itself is highly suspicious**). **Also** **as mentioned earlier, disabling Trim will reduce the lifetime of your SSD drive and will significantly impact its performance over time (your laptop will become slower and slower over several months of use until it becomes almost unusable, you will then have to clean the drive and re-install everything). But you must do it to prevent data leaks** **that could allow forensics to defeat your plausible deniability****. The only way around this at the moment is to have a laptop with a classic HDD drive instead.**[^343][^344][^345][^346]
 
 ###### Шаг 1: Создайте Windows 10/11 установите ключ USB { #hidden-os-step1 }
 
@@ -992,7 +992,7 @@ Overview:
 
 - Нажмите Next (Далее) в качестве экрана Generated Keys (Сгенерированные клю
 
-- Спасать или не спасать disk[^347] - решать вам. Мы рекомендуем сделать один (на всякий случай), просто убедитесь, что он хранится за пределами вашего зашифрованного диска (например, ключ USB или подождите и посмотрите конец этого руководства для руководства по безопасному резервному копированию). Этот диск спасения не будет хранить вашу кодовую фразу, и она все равно понадобится вам для ее использования.
+- Спасать или не спасать disk - решать вам. Мы рекомендуем сделать один (на всякий случай), просто убедитесь, что он хранится за пределами вашего зашифрованного диска (например, ключ USB или подождите и посмотрите конец этого руководства для руководства по безопасному резервному копированию). Этот диск спасения не будет хранить вашу кодовую фразу, и она все равно понадобится вам для ее использования.[^347]
 
 - Режим очистки: выберите 1-проход, чтобы быть в безопасности
 
@@ -1092,7 +1092,7 @@ Overview:
 
 - **Вы зашифровали второй раздел паролем, отличным от пароля системы, потому что не хотите, чтобы кто-то в вашей группе/домене видел ваши данные. Вы не хотели, чтобы эти данные были доступны никому.**
 
-Потратьте некоторое время, чтобы снова прочитать «Возможные объяснения существования двух разделов Veracrypt на одном диске» документации Veracrypt здесь <https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html> <sup> [[Archive.org]](https://web.archive.org/web/https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html)</sup>
+Потратьте некоторое время, чтобы снова прочитать «Возможные объяснения существования двух разделов Veracrypt на одном диске» документации Veracrypt здесь <https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.veracrypt.fr/en/VeraCrypt%20Hidden%20Operating%20System.html)</sup>
 
 СОБЛЮДАЙТЕ ОСТОРОЖНОСТЬ
 
@@ -1114,9 +1114,9 @@ Overview:
 
 Этот шаг и следующие шаги должны выполняться из Host OS. Это может быть ваш Host OS с простым шифрованием (Windows/Linux/macOS) или ваш скрытый OS с правдоподобным отрицанием (только Windows).
 
-В этом маршруте вы будете широко использовать бесплатное программное обеспечение Oracle Virtualbox[^348]. Это программное обеспечение для виртуализации, в котором вы можете создать Virtual Machines, которое эмулирует компьютер с определенным OS (если вы хотите использовать что-то еще, например, Xen, Qemu, KVM или VMWARE, не стесняйтесь делать это, но эта часть руководства охватывает Virtualbox только для удобства).
+В этом маршруте вы будете широко использовать бесплатное программное обеспечение Oracle Virtualbox. Это программное обеспечение для виртуализации, в котором вы можете создать Virtual Machines, которое эмулирует компьютер с определенным OS (если вы хотите использовать что-то еще, например, Xen, Qemu, KVM или VMWARE, не стесняйтесь делать это, но эта часть руководства охватывает Virtualbox только для удобства).[^348]
 
-Таким образом, вы должны знать, что Virtualbox не является программным обеспечением для виртуализации с лучшим послужным списком с точки зрения безопасности. Некоторые из зарегистрированных проблем[^349] не были полностью исправлены до настоящего времени[^350]. Если вы используете Linux и у вас есть немного больше технических навыков, вам следует рассмотреть возможность использования KVM, следуя руководству, доступному по адресу Whonix здесь <https://www.whonix.org/wiki/KVM> <sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/KVM) </sup> и здесь <z> <sup>[[Archive.org]](https://web.archive.org/web/z)</sup>
+Таким образом, вы должны знать, что Virtualbox не является программным обеспечением для виртуализации с лучшим послужным списком с точки зрения безопасности. Некоторые из зарегистрированных проблем не были полностью исправлены до настоящего времени. Если вы используете Linux и у вас есть немного больше технических навыков, вам следует рассмотреть возможность использования KVM, следуя руководству, доступному по адресу Whonix здесь <https://www.whonix.org/wiki/KVM> <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/KVM)</sup> и здесь <z> <sup>[[Archive.org]](https://web.archive.org/web/z)</sup>[^349][^350]
 
 Во всех случаях следует предпринять некоторые шаги:
 
@@ -1192,15 +1192,15 @@ Overview:
 
 Если злоумышленник каким-либо образом скомпрометирует ваш VM OS (например, с помощью вредоносного ПО или эксплойта), он окажется в ловушке во внутренней сети Whonix и не сможет раскрыть IP-адрес общедоступного Wi-Fi.
 
-** Однако у этого решения есть один основной недостаток: помехи при изоляции потока Tor**[^351].
+** Однако у этого решения есть один основной недостаток: помехи при изоляции потока Tor**.[^351]
 
 Изоляция потока - это метод смягчения последствий, используемый для предотвращения некоторых корреляционных атак с помощью различных схем Tor для каждого приложения. Вот иллюстрация, чтобы показать, что такое изоляция потока:
 
 ![image26](../media/image26.png)
 
-(Иллюстрация Марсело Мартинса, <https://stakey.club/en/decred-via-tor-network/> <sup> [[Archive.org]](https://web.archive.org/web/https://stakey.club/en/decred-via-tor-network/)</sup>)
+(Иллюстрация Марсело Мартинса, <https://stakey.club/en/decred-via-tor-network/> <sup>[[Archive.org]](https://web.archive.org/web/https://stakey.club/en/decred-via-tor-network/)</sup>)
 
-VPN/Proxy через Tor попадает на правую сторону [^352], что означает использование VPN/Proxy через Tor заставляет Tor использовать одну цепь для всех действий вместо нескольких цепей для каждой. Это означает, что использование VPN/Proxy вместо Tor может снизить эффективность Tor в некоторых случаях и поэтому должно использоваться только в некоторых конкретных случаях:
+VPN/Proxy через Tor попадает на правую сторону, что означает использование VPN/Proxy через Tor заставляет Tor использовать одну цепь для всех действий вместо нескольких цепей для каждой. Это означает, что использование VPN/Proxy вместо Tor может снизить эффективность Tor в некоторых случаях и поэтому должно использоваться только в некоторых конкретных случаях:[^352]
 
 - Когда служба назначения не разрешает узлы выхода Tor.
 
@@ -1240,7 +1240,7 @@ More information at:
 
 Обратите внимание, что если у вас возникли проблемы с доступом к сети Tor из-за блокировки/цензуры, вы можете попробовать использовать мосты Tor. См. [Использование мостов Tor во враждебных средах](#tor-bridges).
 
-Также можно рассмотреть ** VPN вместо Tor вместо VPN (Пользователь > VPN > Tor > VPN > Интернет)**, используя вместо этого два наличных/Monero оплаченных VPN. Это означает, что вы подключите Host OS к первому VPN от вашего публичного Wi-Fi, затем Whonix подключится к Tor, и, наконец, ваш VM подключится ко второму VPN через Tor через VPN (см. <https://www.whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor> <sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor)</sup>).
+Также можно рассмотреть ** VPN вместо Tor вместо VPN (Пользователь > VPN > Tor > VPN > Интернет)**, используя вместо этого два наличных/Monero оплаченных VPN. Это означает, что вы подключите Host OS к первому VPN от вашего публичного Wi-Fi, затем Whonix подключится к Tor, и, наконец, ваш VM подключится ко второму VPN через Tor через VPN (см. <https://www.whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor> <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Tunnels/Connecting_to_a_VPN_before_Tor)</sup>).
 
 Это, конечно, окажет значительное влияние на производительность и может быть довольно медленным, но Tor необходим где-то для достижения разумной анонимности.
 
@@ -1335,7 +1335,7 @@ Just using a VPN or even a VPN over VPN makes no sense as those can be traced ba
 
 **Пропустите этот шаг, если вы не можете использовать Tor.**
 
-Этот маршрут будет использовать виртуализацию и Whonix[^353] как часть процесса анонимизации. Whonix - это распределение Linux, состоящее из двух Virtual Machines:
+Этот маршрут будет использовать виртуализацию и Whonix как часть процесса анонимизации. Whonix - это распределение Linux, состоящее из двух Virtual Machines:[^353]
 
 - Рабочая станция Whonix (это VM, где вы можете проводить конфиденциальные мероприятия)
 
@@ -1357,17 +1357,17 @@ Whonix хорошо обслуживается и имеет обширную и
 
 #### Примечание по снимкам Virtualbox { #virtualbox-snapshots }
 
-Позже вы создадите и запустите несколько Virtual Machines в Virtualbox для ваших конфиденциальных действий. Virtualbox предоставляет функцию под названием «Снимки» [^354], которая позволяет сохранять состояние VM в любой момент времени. Если по какой-либо причине позже вы захотите вернуться в это состояние, вы можете восстановить этот снимок в любой момент.
+Позже вы создадите и запустите несколько Virtual Machines в Virtualbox для ваших конфиденциальных действий. Virtualbox предоставляет функцию под названием «Снимки», которая позволяет сохранять состояние VM в любой момент времени. Если по какой-либо причине позже вы захотите вернуться в это состояние, вы можете восстановить этот снимок в любой момент.[^354]
 
 **Настоятельно рекомендуем использовать эту функцию, создав снимок после первоначальной установки/обновления каждого VM. Этот снимок должен быть сделан до его использования для любой конфиденциальной/анонимной деятельности.**
 
-This will allow you to turn your VMs into a kind of disposable "Live Operating Systems" (like Tails discussed earlier). Meaning that you will be able to erase all the traces of your activities within a VM by restoring a Snapshot to an earlier state. Of course, this will not be "as good" as Tails (where everything is stored in memory) as there might be traces of this activity left on your hard disk. Forensics studies have shown the ability to recover data from a reverted VM[^355]. Fortunately, there will be ways to remove those traces after the deletion or reverting to an earlier snapshot. Such techniques will be discussed in the [Some additional measures against forensics](#anti-forensics) section of this guide.
+This will allow you to turn your VMs into a kind of disposable "Live Operating Systems" (like Tails discussed earlier). Meaning that you will be able to erase all the traces of your activities within a VM by restoring a Snapshot to an earlier state. Of course, this will not be "as good" as Tails (where everything is stored in memory) as there might be traces of this activity left on your hard disk. Forensics studies have shown the ability to recover data from a reverted VM. Fortunately, there will be ways to remove those traces after the deletion or reverting to an earlier snapshot. Such techniques will be discussed in the [Some additional measures against forensics](#anti-forensics) section of this guide.[^355]
 
 #### Скачать утилиты Virtualbox и Whonix { #download-virtualbox-whonix }
 
 Вы должны скачать несколько вещей в хозяине OS:
 
-- Последняя версия установщика Virtualbox согласно вашему Host OS <https://www.virtualbox.org/wiki/Downloads> <sup> [[Archive.org]](https://web.archive.org/web/https://www.virtualbox.org/wiki/Downloads)</sup>
+- Последняя версия установщика Virtualbox согласно вашему Host OS <https://www.virtualbox.org/wiki/Downloads> <sup>[[Archive.org]](https://web.archive.org/web/https://www.virtualbox.org/wiki/Downloads)</sup>
 
 - (Пропустите это, если вы не можете использовать Tor самостоятельно или через VPN) Последняя стабильная **Whonix 18.x** OVA от:
     - [Выпуски GitHub](https://github.com/Whonix/whonix-gw-ga/releases/latest) <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Download/VirtualBox)</sup>
@@ -1403,15 +1403,15 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
     ```
 
 ** Смягчение последствий призрака/расплавления:** (опционально, может повлиять на производительность)
-Для получения подробной информации об укреплении Spectre/Meltdown см. <https://www.whonix.org/wiki/Spectre_Meltdown><sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Spectre_Meltdown)</sup>.
+Для получения подробной информации об укреплении Spectre/Meltdown см. <https://www.whonix.org/wiki/Spectre_Meltdown><sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Spectre_Meltdown)</sup>.
 
 **Дополнительное обеспечение:** (Whonix 18.x+)
-- Рассмотрите возможность включения AppArmor на рабочей станции Whonix: <https://www.whonix.org/wiki/AppArmor><sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/AppArmor)</sup>
-- Обзор рекомендаций [DoNot](https://www.whonix.org/wiki/DoNot)<sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/DoNot) </sup>
+- Рассмотрите возможность включения AppArmor на рабочей станции Whonix: <https://www.whonix.org/wiki/AppArmor><sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/AppArmor)</sup>
+- Обзор рекомендаций [DoNot](https://www.whonix.org/wiki/DoNot)<sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/DoNot)</sup>
 
 - Отключите контроллер USB, который включен по умолчанию. Установите указательное устройство в положение «PS/2 Mouse» (Мышь PS/2), иначе изменения будут возвращены.
 
-Наконец, также следуйте этой рекомендации, чтобы рассинхронизировать часы, вы являетесь вашим VM по сравнению с вашим хостом OS <https://www.whonix.org/wiki/Network_Time_Synchronization#Spoof_the_Initial_Virtual_Hardware_Clock_Offset><sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Network_Time_Synchronization)</sup>
+Наконец, также следуйте этой рекомендации, чтобы рассинхронизировать часы, вы являетесь вашим VM по сравнению с вашим хостом OS <https://www.whonix.org/wiki/Network_Time_Synchronization#Spoof_the_Initial_Virtual_Hardware_Clock_Offset><sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Network_Time_Synchronization)</sup>
 
 Это смещение должно находиться в диапазоне 60000 миллисекунд и должно быть различным для каждого VM, и вот несколько примеров (которые позже могут быть применены к любому VM):
 
@@ -1423,7 +1423,7 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 - ```VBoxManage modifyvm "Whonix-Workstation-XFCE" --biossystemtimeoffset +27931```
 
-Кроме того, рассмотрите возможность применения этих смягчений из VirtualBox для смягчения уязвимостей Spectre[^356]/Meltdown[^357], выполнив эту команду из каталога программ VirtualBox. Все это описано здесь: <https://www.whonix.org/wiki/Spectre_Meltdown> <sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Spectre_Meltdown) </sup> (имейте в виду, что это может серьезно повлиять на производительность вашего VMs, но должно быть сделано для лучшей безопасности).
+Кроме того, рассмотрите возможность применения этих смягчений из VirtualBox для смягчения уязвимостей Spectre/Meltdown, выполнив эту команду из каталога программ VirtualBox. Все это описано здесь: <https://www.whonix.org/wiki/Spectre_Meltdown> <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Spectre_Meltdown)</sup> (имейте в виду, что это может серьезно повлиять на производительность вашего VMs, но должно быть сделано для лучшей безопасности).[^356][^357]
 
 Наконец, рассмотрим советы по безопасности от самих Virtualbox здесь <https://www.virtualbox.org/manual/ch13.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.virtualbox.org/manual/ch13.html)</sup>
 
@@ -1450,7 +1450,7 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 - Запуск Whonix VMs
 
-На этом этапе помните, что если у вас возникли проблемы с подключением к Tor из-за цензуры или блокировки, вам следует рассмотреть возможность подключения с использованием мостов, как описано в [Bridges](https://www.whonix.org/wiki/Bridges) <sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Bridges)</sup>.
+На этом этапе помните, что если у вас возникли проблемы с подключением к Tor из-за цензуры или блокировки, вам следует рассмотреть возможность подключения с использованием мостов, как описано в [Bridges](https://www.whonix.org/wiki/Bridges) <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Bridges)</sup>.
 
 - Обновите Whonix VMs, следуя инструкциям на [Программное обеспечение и обновления операционной системы](https://www.whonix.org/wiki/Operating_System_Software_and_Updates#Updates) <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Operating_System_Software_and_Updates)</sup>
 
@@ -1462,7 +1462,7 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 - Следующий шаг
 
-**Важное примечание: вы также должны прочитать эти очень хорошие рекомендации <https://www.whonix.org/wiki/DoNot> ** <sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/DoNot) </sup> **, поскольку большинство из этих принципов также будут применяться к этому руководству. Вы также должны прочитать их общую документацию здесь <https://www.whonix.org/wiki/Documentation>** <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Documentation)</sup> **, которая также предоставит тонны советов, подобных этому руководству.**
+**Важное примечание: вы также должны прочитать эти очень хорошие рекомендации <https://www.whonix.org/wiki/DoNot> ** <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/DoNot)</sup> **, поскольку большинство из этих принципов также будут применяться к этому руководству. Вы также должны прочитать их общую документацию здесь <https://www.whonix.org/wiki/Documentation>** <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Documentation)</sup> **, которая также предоставит тонны советов, подобных этому руководству.**
 
 ### Whonix 18.x Усовершенствования и передовая практика { #whonix-18-improvements }
 
@@ -1504,25 +1504,25 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 Просто используйте прилагаемую рабочую станцию Whonix VM. **Это самый безопасный и надежный способ передвижения по этому маршруту.**
 
-**Это также единственный VM, который будет предоставлять изоляцию потока, предварительно настроенную для большинства приложений по умолчанию**[^358]**.**
+**Это также единственный VM, который будет предоставлять изоляцию потока, предварительно настроенную для большинства приложений по умолчанию****.**[^358]
 
 Если вам нужно дополнительное программное обеспечение на рабочей станции (например, другой браузер), следуйте их руководству здесь <https://www.whonix.org/wiki/Install_Software> <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Install_Software)</sup>
 
-Рассмотрите возможность запуска Whonix в режиме реального времени, если для дополнительной защиты от вредоносного ПО см. <https://www.whonix.org/wiki/Anti-Forensics_Precautions><sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Anti-Forensics_Precautions)</sup>
+Рассмотрите возможность запуска Whonix в режиме реального времени, если для дополнительной защиты от вредоносного ПО см. <https://www.whonix.org/wiki/Anti-Forensics_Precautions><sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Anti-Forensics_Precautions)</sup>
 
 Не забудьте применить рекомендации по закалке VM здесь: [рекомендации по закалке Virtualbox].
 
-Рассмотрите возможность использования AppArmor на своих рабочих станциях Whonix, следуя этому руководству: <https://www.whonix.org/wiki/AppArmor><sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/AppArmor)</sup>
+Рассмотрите возможность использования AppArmor на своих рабочих станциях Whonix, следуя этому руководству: <https://www.whonix.org/wiki/AppArmor><sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/AppArmor)</sup>
 
 #### Linux (любой дистрибутив) { #linux-any-distro }
 
-**Будьте осторожны, любая настройка, которую вы сделаете для Whonix Guest VMs (раскладка клавиатуры, язык, часовой пояс, разрешение экрана или другое), может быть использована для снятия отпечатков пальцев с вашего VMs позже. См.<https://www.whonix.org/wiki/VM_Fingerprinting>* *<sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/VM_Fingerprinting)</sup>
+**Будьте осторожны, любая настройка, которую вы сделаете для Whonix Guest VMs (раскладка клавиатуры, язык, часовой пояс, разрешение экрана или другое), может быть использована для снятия отпечатков пальцев с вашего VMs позже. См.<https://www.whonix.org/wiki/VM_Fingerprinting>* *<sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/VM_Fingerprinting)</sup>
 
 ##### Если вы можете использовать Tor (изначально или поверх VPN) { #linux-vm-tor }
 
 Используйте дистрибутив Linux по вашему выбору. Мы бы порекомендовали Ubuntu или Fedora для удобства, но любой другой тоже подойдет. Не включайте телеметрию.
 
-Подробные инструкции см. в этом руководстве<https://www.whonix.org/wiki/Other_Operating_Systems> <sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Other_Operating_Systems) </sup>.
+Подробные инструкции см. в этом руководстве<https://www.whonix.org/wiki/Other_Operating_Systems> <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Other_Operating_Systems)</sup>.
 
 Рассмотрите возможность закалки VM, как рекомендовано в [Закалка Linux].
 
@@ -1540,7 +1540,7 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 ### Windows 10/11 Virtual Machine { #windows-vm }
 
-**Будьте осторожны, любая настройка, которую вы сделаете для Whonix Guest VMs (раскладка клавиатуры, язык, часовой пояс, разрешение экрана или другое), может быть использована для снятия отпечатков пальцев с вашего VMs позже. См.<https://www.whonix.org/wiki/VM_Fingerprinting>* *<sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/VM_Fingerprinting)</sup>
+**Будьте осторожны, любая настройка, которую вы сделаете для Whonix Guest VMs (раскладка клавиатуры, язык, часовой пояс, разрешение экрана или другое), может быть использована для снятия отпечатков пальцев с вашего VMs позже. См.<https://www.whonix.org/wiki/VM_Fingerprinting>* *<sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/VM_Fingerprinting)</sup>
 
 #### Windows 10 и 11 ISO скачать { #windows-iso-download }
 
@@ -1548,7 +1548,7 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 #### Если вы можете использовать Tor (изначально или поверх VPN) { #windows-vm-tor }
 
-Подробные инструкции см. в этом руководстве<https://www.whonix.org/wiki/Other_Operating_Systems> <sup> [[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Other_Operating_Systems) </sup>.
+Подробные инструкции см. в этом руководстве<https://www.whonix.org/wiki/Other_Operating_Systems> <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Other_Operating_Systems)</sup>.
 
 ##### Установка { #windows-vm-install }
 
@@ -1770,11 +1770,11 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 - Windows Host OS:
 
-    - Учебник по Virtualbox Catalina: <https://www.wikigain.com/install-macos-catalina-on-virtualbox-on-windows/><sup> [[Archive.org]](https://web.archive.org/web/https://www.wikigain.com/install-macos-catalina-on-virtualbox-on-windows/)</sup>
+    - Учебник по Virtualbox Catalina: <https://www.wikigain.com/install-macos-catalina-on-virtualbox-on-windows/><sup>[[Archive.org]](https://web.archive.org/web/https://www.wikigain.com/install-macos-catalina-on-virtualbox-on-windows/)</sup>
 
-    - Учебник по Virtualbox Big Sur: <https://www.wikigain.com/how-to-install-macos-big-sur-on-virtualbox-on-windows-pc/><sup> [[Archive.org]](https://web.archive.org/web/https://www.wikigain.com/how-to-install-macos-big-sur-on-virtualbox-on-windows-pc/)</sup>
+    - Учебник по Virtualbox Big Sur: <https://www.wikigain.com/how-to-install-macos-big-sur-on-virtualbox-on-windows-pc/><sup>[[Archive.org]](https://web.archive.org/web/https://www.wikigain.com/how-to-install-macos-big-sur-on-virtualbox-on-windows-pc/)</sup>
 
-    - Учебное пособие по Virtualbox Monterey: <https://www.wikigain.com/install-macos-monterey-on-virtualbox/><sup> [[Archive.org]](https://web.archive.org/web/https://www.wikigain.com/install-macos-monterey-on-virtualbox/)</sup>
+    - Учебное пособие по Virtualbox Monterey: <https://www.wikigain.com/install-macos-monterey-on-virtualbox/><sup>[[Archive.org]](https://web.archive.org/web/https://www.wikigain.com/install-macos-monterey-on-virtualbox/)</sup>
 
 - macOS Host OS:
 
@@ -1816,9 +1816,9 @@ There are some drawbacks to running macOS on Virtual Machines. The main one is t
 
 ### KeepassXC { #keepassxc }
 
-Вам понадобится что-то для хранения ваших данных (логины/пароли, удостоверения личности и информация TOTP[^359]).
+Вам понадобится что-то для хранения ваших данных (логины/пароли, удостоверения личности и информация TOTP).[^359]
 
-Для этой цели мы настоятельно рекомендуем KeePassXC из-за его интегрированной функции TOTP. Это возможность создавать записи для аутентификации 2FA[^360] с помощью функции аутентификации.
+Для этой цели мы настоятельно рекомендуем KeePassXC из-за его интегрированной функции TOTP. Это возможность создавать записи для аутентификации 2FA с помощью функции аутентификации.[^360]
 
 Помните, что в идеале он должен быть установлен на вашем гостевом VM, а не на Host OS. Вы никогда не должны выполнять какие-либо деликатные действия из своего Host OS.
 
@@ -1832,19 +1832,19 @@ There are some drawbacks to running macOS on Virtual Machines. The main one is t
 
     - Загрузить с <https://keepassxc.org/download/> <sup>[[Archive.org]](https://web.archive.org/web/https://keepassxc.org/download/)</sup>
 
-    - Следуйте инструкциям здесь <https://keepassxc.org/docs/KeePassXC_GettingStarted.html#_linux> <sup> [[Archive.org]](https://web.archive.org/web/https://keepassxc.org/docs/KeePassXC_GettingStarted.html)</sup>
+    - Следуйте инструкциям здесь <https://keepassxc.org/docs/KeePassXC_GettingStarted.html#_linux> <sup>[[Archive.org]](https://web.archive.org/web/https://keepassxc.org/docs/KeePassXC_GettingStarted.html)</sup>
 
 - Windows:
 
     - Загрузить с <https://keepassxc.org/download/> <sup>[[Archive.org]](https://web.archive.org/web/https://keepassxc.org/download/)</sup>
 
-    - Следуйте инструкциям здесь <https://KeePassXC.org/docs/KeePassXC_GettingStarted.html#_microsoft_windows/> <sup> [[Archive.org]](https://web.archive.org/web/https://keepassxc.org/docs/KeePassXC_GettingStarted.html)</sup>
+    - Следуйте инструкциям здесь <https://KeePassXC.org/docs/KeePassXC_GettingStarted.html#_microsoft_windows/> <sup>[[Archive.org]](https://web.archive.org/web/https://keepassxc.org/docs/KeePassXC_GettingStarted.html)</sup>
 
 - macOS:
 
     - Загрузить с <https://keepassxc.org/download/> <sup>[[Archive.org]](https://web.archive.org/web/https://keepassxc.org/download/)</sup>
 
-    - Следуйте инструкциям здесь <https://keepassxc.org/docs/KeePassXC_GettingStarted.html#_macos> <sup> [[Archive.org]](https://web.archive.org/web/https://keepassxc.org/docs/KeePassXC_GettingStarted.html)</sup>
+    - Следуйте инструкциям здесь <https://keepassxc.org/docs/KeePassXC_GettingStarted.html#_macos> <sup>[[Archive.org]](https://web.archive.org/web/https://keepassxc.org/docs/KeePassXC_GettingStarted.html)</sup>
 
 Проверьте, что KeePassXC работает, прежде чем переходить к следующему шагу.
 
@@ -1886,7 +1886,7 @@ Remember that all VPN activities are happening from a sandboxed VM on an interna
 
 > Не поддерживается Whonix
 
-**Этот путь не поддерживается проектом Whonix **[^361], но я все равно дам эту опцию. Это полезно для предотвращения утечки любой информации из вашего Host OS во время использования Whonix VMs.
+**Этот путь не поддерживается проектом Whonix **, но я все равно дам эту опцию. Это полезно для предотвращения утечки любой информации из вашего Host OS во время использования Whonix VMs.[^361]
 
 **Обратите внимание, что эта опция как есть будет работать только на Wi-Fis без кэптивного портала (где вы должны ввести некоторую информацию, чтобы разблокировать доступ).**
 
