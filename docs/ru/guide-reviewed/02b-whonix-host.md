@@ -865,7 +865,7 @@ Whonix хорошо поддерживается и имеет обширную,
 Рассинхронизируйте часы ВМ, чтобы предотвратить атаки синхронизации (см. [[Документация Whonix — синхронизация сетевого времени]](https://www.whonix.org/wiki/Network_Time_Synchronization) <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Network_Time_Synchronization)</sup>):
 
     ```sh
-    # Примеры смещений (выберите разные значения для каждой ВМ)
+    # Example offsets (choose different values for each VM)
     VBoxManage modifyvm "Whonix-Gateway-XFCE" --biossystemtimeoffset -35017
     VBoxManage modifyvm "Whonix-Workstation-XFCE" --biossystemtimeoffset +27931
     ```
