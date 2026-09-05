@@ -12,7 +12,6 @@ repo_name: ""
 theme:
   name: material
   custom_dir: docs/overrides
-  locale: ru
   favicon: media/profile.png
   icon:
     logo: material/bird
@@ -37,13 +36,13 @@ theme:
       accent: green
       toggle:
         icon: material/monitor-off
-        name: Printing Press
+        name: Печатный станок
     - scheme: default
       primary: custom
       accent: custom
       toggle:
         icon: material/monitor
-        name: Monitor
+        name: Монитор
 
 plugins:
   - social: {}
@@ -134,7 +133,7 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: ["docs"]
       auto_append:
-        - includes/glossary.md
+        - ru/includes/glossary.md
   - pymdownx.tasklist:
       custom_checkbox: true
   - attr_list: {}
