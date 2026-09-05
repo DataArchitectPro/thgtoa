@@ -20,7 +20,7 @@ schema:
   <h1 class="hero-title">Журнал изменений<span class="hero-subtitle">Что изменилось и когда.</span></h1>
   <p class="hero-tagline">
     Следует стандартам <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a> и
-    <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.
+    <a href="https://semver.org/spec/v2.0.0.html">семантическому версионированию</a>.
     Создаётся автоматически исключительно из conventional commits.
   </p>
   <div class="hero-cta-row">
