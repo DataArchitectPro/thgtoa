@@ -546,7 +546,7 @@ Again, this is to prevent some cold-boot and evil-maid attacks by powering down 
 
 Вы должны рандомизировать свой адрес MAC, как объяснялось ранее в этом руководстве:
 
-Перейдите в Settings > Network & Internet > Wi-Fi > Enable Random hardware addresses (Настройки > Сеть и Интернет > ZZPROT0
+Перейдите в Settings > Network & Internet > Wi-Fi > Enable Random hardware addresses
 
 В качестве альтернативы вы можете использовать это бесплатное программное обеспечение: <https://technitium.com/tmac/> <sup>[[Archive.org]](https://web.archive.org/web/https://technitium.com/tmac/)</sup>
 
@@ -652,9 +652,9 @@ Overview:
 
 - Щелкните по нему правой кнопкой мыши и нажмите «Запустить от имени администратора»
 
-- Запустите ```manage-bde -protectors -delete c:`ZPROT2QQ (это удалит текущую защиту: ключ восстановления, который вам не понадобится)
+- Запустите ```manage-bde -protectors -delete c: (это удалит текущую защиту: ключ восстановления, который вам не понадобится)
 
-- Запустите ```manage-bde -protectors -add c: -TPMAndPIN`ZPROT2QQ (вам будет предложено ввести пароль перед загрузкой)
+- Запустите ```manage-bde -protectors -add c: -TPMAndPIN (вам будет предложено ввести пароль перед загрузкой)
 
     - Введите пароль или парольную фразу по вашему выбору (подходящую)
 
@@ -1594,13 +1594,13 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 - Windows 10: Включите IPv4 и установите следующее, Windows 11: Переключитесь с DHCP на ручной режим и установите следующее:
 
-    - IP-адрес ```10.152.152.50`ZPROT2QQ (увеличьте этот IP-адрес на один для любого другого VM)
+    - IP-адрес ```10.152.152.50 (увеличьте этот IP-адрес на один для любого другого VM)
 
-    - Длина префикса подсети ```18``` (``ZPROT4QQ``)
+    - Длина префикса подсети ```18``` до ```255.255.192.0```
 
-    - Шлюз ```10.152.152.10`ZPROT2QQ (это шлюз Whonix)
+    - Шлюз ```10.152.152.10 (это шлюз Whonix)
 
-    - (Windows 10) DNS ```10.152.152.10`ZPROT2QQ (это снова шлюз Whonix)
+    - (Windows 10) DNS ```10.152.152.10 (это снова шлюз Whonix)
 
     - (Windows 11) выйдите из назначения IP и выберите назначение DNS-сервера и установите его на ```10.152.152.10``` (это снова шлюз Whonix)
 
@@ -1674,13 +1674,13 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 - Переключение с DHCP на статический
 
-    - IP-адрес ```10.152.152.50`ZPROT2QQ (увеличьте этот IP-адрес на один для любого другого VM)
+    - IP-адрес ```10.152.152.50 (увеличьте этот IP-адрес на один для любого другого VM)
 
-    - Длина префикса подсети ```18``` (``ZPROT4QQ``)
+    - Длина префикса подсети ```18``` до ```255.255.192.0```
 
-    - Шлюз ```10.152.152.10`ZPROT2QQ (это шлюз Whonix)
+    - Шлюз ```10.152.152.10 (это шлюз Whonix)
 
-    - DNS ```10.152.152.10`ZPROT2QQ (это снова шлюз Whonix)
+    - DNS ```10.152.152.10 (это снова шлюз Whonix)
 
 #### Если вы не можете использовать Tor { #android-vm-no-tor }
 
@@ -1754,13 +1754,13 @@ This will allow you to turn your VMs into a kind of disposable "Live Operating S
 
 Используйте следующие настройки при появлении запроса в процессе установки macOS:
 
-- IP-адрес ```10.152.152.50`ZPROT2QQ (увеличьте этот IP-адрес на один для любого другого VM)
+- IP-адрес ```10.152.152.50 (увеличьте этот IP-адрес на один для любого другого VM)
 
-- Длина префикса подсети ```18``` (``ZPROT4QQ``)
+- Длина префикса подсети ```18``` до ```255.255.192.0```
 
-- Шлюз ```10.152.152.10`ZPROT2QQ (это шлюз Whonix)
+- Шлюз ```10.152.152.10 (это шлюз Whonix)
 
-- DNS ```10.152.152.10`ZPROT2QQ (это снова шлюз Whonix)
+- DNS ```10.152.152.10 (это снова шлюз Whonix)
 
 #### Если вы не можете использовать Tor { #macos-vm-no-tor }
 
@@ -1916,17 +1916,17 @@ Remember that all VPN activities are happening from a sandboxed VM on an interna
 
 - В файле измените следующие строки:
 
-    - ```# auto eth0``` до ``ZPROT4QQ``
+    - ```# auto eth0``` до ```auto eth0```
 
-    - ```# iface eth0 inet dhcp``` до ``ZPROT4QQ``
+    - ```# iface eth0 inet dhcp``` до ```iface eth0 inet dhcp```
 
-    - ```iface eth0 inet static``` до ``ZPROT4QQ``
+    - ```iface eth0 inet static``` до ```# iface eth0 inet static```
 
-    - ``` address 10.0.2.15``` до ``ZPROT4QQ``
+    - ``` address 10.0.2.15``` до ```# address 10.0.2.15```
 
-    - ``` netmask 255.255.255.0``` до ``ZPROT4QQ``
+    - ``` netmask 255.255.255.0``` до ```# netmask 255.255.255.0```
 
-    - ``` gateway 10.0.2.2``` до ``ZPROT4QQ``
+    - ``` gateway 10.0.2.2``` до ```# gateway 10.0.2.2```
 
 - Сохранить (используя Ctrl+X и подтвердить с помощью Y) и выключить VM из верхнего левого меню
 
@@ -2110,17 +2110,17 @@ XUbuntu был выбран из-за производительности XFCE.
 
 - В файле измените следующие строки:
 
-    - ```# auto eth0``` до ``ZPROT4QQ``
+    - ```# auto eth0``` до ```auto eth0```
 
-    - ```# iface eth0 inet dhcp``` до ``ZPROT4QQ``
+    - ```# iface eth0 inet dhcp``` до ```iface eth0 inet dhcp```
 
-    - ```iface eth0 inet static``` до ``ZPROT4QQ``
+    - ```iface eth0 inet static``` до ```# iface eth0 inet static```
 
-    - ``` address 10.0.2.15``` до ``ZPROT4QQ``
+    - ``` address 10.0.2.15``` до ```# address 10.0.2.15```
 
-    - ``` netmask 255.255.255.0``` до ``ZPROT4QQ``
+    - ``` netmask 255.255.255.0``` до ```# netmask 255.255.255.0```
 
-    - ``` gateway 10.0.2.2``` до ``ZPROT4QQ``
+    - ``` gateway 10.0.2.2``` до ```# gateway 10.0.2.2```
 
 - Сохранить (используя Ctrl+X и подтвердить с помощью Y) и выключить VM из верхнего левого меню
 
@@ -2256,15 +2256,15 @@ Why XUbuntu and not Ubuntu or KUbuntu? Because XUbuntu uses an XFCE desktop envi
 
     - ```# auto eth0``` to ```auto eth0```
 
-    - ```# iface eth0 inet dhcp``` до ``ZPROT4QQ``
+    - ```# iface eth0 inet dhcp``` до ```iface eth0 inet dhcp```
 
-    - ```iface eth0 inet static``` до ``ZPROT4QQ``
+    - ```iface eth0 inet static``` до ```# iface eth0 inet static```
 
-    - ``` address 10.0.2.15``` до ``ZPROT4QQ``
+    - ``` address 10.0.2.15``` до ```# address 10.0.2.15```
 
-    - ``` netmask 255.255.255.0``` до ``ZPROT4QQ``
+    - ``` netmask 255.255.255.0``` до ```# netmask 255.255.255.0```
 
-    - ``` gateway 10.0.2.2``` до ``ZPROT4QQ``
+    - ``` gateway 10.0.2.2``` до ```# gateway 10.0.2.2```
 
 - Save (using Ctrl+X and confirm with Y) and power off the VM from the top left menu
 
