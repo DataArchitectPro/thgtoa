@@ -1,6 +1,6 @@
-site_name: The Hitchhiker's Guide
+site_name: Путеводитель автостопщика по анонимности
 site_author: Anonymous Planet
-site_description: "The comprehensive guide for online #anonymity and #opsec."
+site_description: "Подробное руководство по анонимности и операционной безопасности в сети."
 site_dir: "site"
 docs_dir: "docs"
 exclude_docs: |
@@ -12,7 +12,7 @@ repo_name: ""
 theme:
   name: material
   custom_dir: docs/overrides
-  locale: en
+  locale: ru
   favicon: media/profile.png
   icon:
     logo: material/bird
@@ -30,7 +30,7 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-  language: en
+  language: ru
   palette:
     - scheme: slate
       primary: hacker
@@ -69,8 +69,8 @@ extra_css:
 #   - stylesheets/print-and-utilities.css
 
 copyright: >-
-  &copy; 2023-2026 Anonymous Planet & contributors &mdash;
-  licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>.
+  &copy; 2023–2026 Anonymous Planet и участники &mdash;
+  лицензия <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>.
 
 extra:
   social:
@@ -148,13 +148,13 @@ markdown_extensions:
       toc_depth: 3
 
 nav:
-  - "Home": index.md
-  - "Verify": verify/index.md
-  - "Guide": guide/index.md
-  - "Code": code/index.md
-  - "Donations": contribute/index.md
-  - "A Constitution": constitution/index.md
-  - "Mirrors": mirrors/index.md
-  - "Changelog": changelog/index.md
-  - "Anonymous Planet": about/index.md
-  - "PGP": pgp/index.md
+  - "Главная": index.md
+  - "Проверка": ru/verify/index.md
+  - "Руководство": ru/guide/index.md
+  - "Код": ru/code/index.md
+  - "Пожертвования": ru/contribute/index.md
+  - "Конституция": ru/constitution/index.md
+  - "Зеркала": ru/mirrors/index.md
+  - "Журнал изменений": ru/changelog/index.md
+  - "Anonymous Planet": ru/about/index.md
+  - "PGP": ru/pgp/index.md
