@@ -894,3 +894,4 @@ Whonix хорошо поддерживается и имеет обширную,
 Также рассмотрите применение этих мер VirtualBox против уязвимостей Spectre[^356]/Meltdown[^357], выполнив эту команду из каталога программы VirtualBox. Все они описаны здесь: <https://www.whonix.org/wiki/Spectre_Meltdown> <sup>[[Archive.org]](https://web.archive.org/web/https://www.whonix.org/wiki/Spectre_Meltdown)</sup> (учтите, что они могут серьёзно снизить производительность ВМ, но должны применяться для наилучшей безопасности).
 
 Наконец, ознакомьтесь с рекомендациями по безопасности от самого Virtualbox: <https://www.virtualbox.org/manual/ch13.html> <sup>[[Archive.org]](https://web.archive.org/web/https://www.virtualbox.org/manual/ch13.html)</sup>
+
