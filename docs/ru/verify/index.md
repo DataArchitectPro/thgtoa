@@ -6,9 +6,9 @@ hide:
 schema:
   "@context": https://schema.org
   "@type": Organization
-  "@id": https://anonymousplanet.net/
+  "@id": https://dataarchitectpro.github.io/thgtoa/
   name: Anonymous Planet
-  url: https://anonymousplanet.net/verify/
+  url: https://dataarchitectpro.github.io/thgtoa/ru/verify/
   logo: ../../media/profile.png
 ---
 
@@ -33,7 +33,7 @@ schema:
   <div class="index-card">
     <h3 class="index-card__title">Руководство в PDF</h3>
     <p class="index-card__body"><code>thgtoa.pdf</code> и <code>thgtoa-dark.pdf</code> — полное руководство в светлой и тёмной теме. Единственный канонический экспорт в одном файле.</p>
-    <a href="https://github.com/Anon-Planet/thgtoa/releases" class="index-card__link">Последний выпуск</a>
+    <a href="https://github.com/DataArchitectPro/thgtoa/releases" class="index-card__link">Последний выпуск</a>
   </div>
 
   <div class="index-card">
@@ -80,7 +80,7 @@ python scripts/verify_pdf.py --vt
 gpg --import pgp/anonymousplanet.asc
 ```
 
-Прежде чем доверять ключу, сверьте отпечаток с нашей [страницей PGP](../pgp/index.md) и [выпусками GitHub](https://github.com/Anon-Planet/thgtoa/releases).
+Прежде чем доверять ключу, сверьте отпечаток с нашей [страницей PGP](../pgp/index.md) и [выпусками GitHub](https://github.com/DataArchitectPro/thgtoa/releases).
 
 ### 2. Проверьте PDF
 

@@ -6,12 +6,12 @@ hide:
 schema:
   "@context": https://schema.org
   "@type": Organization
-  "@id": https://anonymousplanet.net/
+  "@id": https://dataarchitectpro.github.io/thgtoa/
   name: Anonymous Planet
-  url: https://anonymousplanet.net/guide/
+  url: https://dataarchitectpro.github.io/thgtoa/ru/guide/
   logo: ../../media/profile.png
   sameAs:
-    - https://github.com/Anon-Planet
+    - https://github.com/DataArchitectPro
     - https://opencollective.com/anonymousplanetorg
 ---
 

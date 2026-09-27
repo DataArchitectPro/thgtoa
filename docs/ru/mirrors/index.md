@@ -7,12 +7,12 @@ hide:
 schema:
   "@context": https://schema.org
   "@type": Organization
-  "@id": https://anonymousplanet.net/
+  "@id": https://dataarchitectpro.github.io/thgtoa/
   name: Anonymous Planet
-  url: https://anonymousplanet.net/mirrors/
+  url: https://dataarchitectpro.github.io/thgtoa/ru/mirrors/
   logo: ../../media/profile.png
   sameAs:
-    - https://github.com/Anon-Planet
+    - https://github.com/DataArchitectPro
     - https://opencollective.com/anonymousplanetorg
 ---
 
@@ -51,7 +51,7 @@ schema:
   <div class="index-card">
     <h3 class="index-card__title">Экспорт PDF</h3>
     <p class="index-card__body">Подписанный одностраничный PDF, автоматически собираемый из исходного кода. Доступны светлая и тёмная версии. Файлы хешей и подписей приведены в примечаниях к выпуску.</p>
-    <a href="https://github.com/Anon-Planet/thgtoa/releases" class="index-card__link">Выпуски</a>
+    <a href="https://github.com/DataArchitectPro/thgtoa/releases" class="index-card__link">Выпуски</a>
   </div>
 
   <div class="index-card">
@@ -83,7 +83,7 @@ schema:
   <div class="index-card">
     <h3 class="index-card__title">GitHub</h3>
     <p class="index-card__body">Основная площадка разработки. Здесь находятся задачи, запросы на слияние и CI.</p>
-    <a href="https://github.com/anon-planet" class="index-card__link">github.com/anon-planet</a>
+    <a href="https://github.com/DataArchitectPro/thgtoa" class="index-card__link">github.com/DataArchitectPro/thgtoa</a>
   </div>
 
   <div class="index-card">

@@ -6,12 +6,12 @@ hide:
 schema:
   "@context": https://schema.org
   "@type": Organization
-  "@id": https://anonymousplanet.net/
+  "@id": https://dataarchitectpro.github.io/thgtoa/
   name: Anonymous Planet PGP
-  url: https://anonymousplanet.net/pgp/
+  url: https://dataarchitectpro.github.io/thgtoa/ru/pgp/
   logo: ../../media/profile.png
   sameAs:
-    - https://github.com/Anon-Planet
+    - https://github.com/DataArchitectPro
     - https://opencollective.com/anonymousplanetorg
 ---
 
@@ -32,7 +32,7 @@ schema:
 
 ## Наши ключи { #keys }
 
-Полная связка ключей находится по адресу `https://anonymousplanet.net/pgp/anonymousplanet.asc`.<br>Перед импортом всегда сверяйте отпечатки с нашими [выпусками GitHub](https://github.com/Anon-Planet/thgtoa/releases).
+Полная связка ключей находится по адресу `https://dataarchitectpro.github.io/thgtoa/pgp/anonymousplanet.asc`.<br>Перед импортом всегда сверяйте отпечатки с нашими [выпусками GitHub](https://github.com/DataArchitectPro/thgtoa/releases).
 
 <div class="index-grid">
 
@@ -60,7 +60,7 @@ schema:
 
 ## Ротация ключей { #rotation }
 
-Ключи могут периодически меняться. О ротации всегда объявляется через [GitHub Releases](https://github.com/Anon-Planet/thgtoa/releases) и [журнал изменений](../changelog/index.md). Если сохранённый у вас ключ не указан здесь, считайте его скомпрометированным и импортируйте ключ заново.
+Ключи могут периодически меняться. О ротации всегда объявляется через [GitHub Releases](https://github.com/DataArchitectPro/thgtoa/releases) и [журнал изменений](../changelog/index.md). Если сохранённый у вас ключ не указан здесь, считайте его скомпрометированным и импортируйте ключ заново.
 
 ---
 
@@ -68,7 +68,7 @@ schema:
 
 <div class="donate-address-block">
   <div class="donate-address-label">URL связки ключей</div>
-  <code class="donate-address">https://anonymousplanet.net/pgp/anonymousplanet.asc</code>
+  <code class="donate-address">https://dataarchitectpro.github.io/thgtoa/pgp/anonymousplanet.asc</code>
 </div>
 
 ```txt

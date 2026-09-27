@@ -7,12 +7,12 @@ hide:
 schema:
   "@context": https://schema.org
   "@type": Organization
-  "@id": https://anonymousplanet.net/
+  "@id": https://dataarchitectpro.github.io/thgtoa/
   name: Anonymous Planet
-  url: https://anonymousplanet.net/about/
+  url: https://dataarchitectpro.github.io/thgtoa/ru/about/
   logo: ../../media/profile.png
   sameAs:
-    - https://github.com/Anon-Planet
+    - https://github.com/DataArchitectPro
     - https://opencollective.com/anonymousplanetorg
 ---
 
@@ -96,7 +96,7 @@ Nope — опыт в радиоэлектронной разведке (SIGINT),
   <div class="index-card">
     <h3 class="index-card__title">Задачи GitHub</h3>
     <p class="index-card__body">Сообщайте об ошибках, неработающих ссылках или устаревшем содержании. Запросы на слияние приветствуются во всех наших зеркалах.</p>
-    <a href="https://github.com/Anon-Planet/thgtoa/issues" class="index-card__link">Создать задачу</a>
+    <a href="https://github.com/DataArchitectPro/thgtoa/issues" class="index-card__link">Создать задачу</a>
   </div>
 
 </div>

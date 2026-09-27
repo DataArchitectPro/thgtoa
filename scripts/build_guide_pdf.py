@@ -293,7 +293,7 @@ def create_toc_html(tmp_dir: str, headings: list[tuple[int, str]], is_dark: bool
         '<!DOCTYPE html>\n<html>\n<head>\n<meta charset="UTF-8">\n'
         f"<style>\n{css}</style>\n</head>\n<body>\n"
         '<div class="page">\n'
-        '  <p class="toc-heading">Table of Contents</p>\n'
+        '  <p class="toc-heading">Оглавление</p>\n'
         f"{body}\n"
         "</div>\n</body>\n</html>\n"
     )
@@ -335,13 +335,13 @@ def prepend_front_matter(browser: Path, pdf_path: Path, is_dark: bool) -> Path:
     """Render cover + ToC and prepend them to pdf_path in-place.
 
     - Cover HTML is sourced from convert.py (single definition).
-    - ToC headings are parsed from docs/guide/index.md.
+    - ToC headings are parsed from docs/ru/guide/index.md.
     - Merged order: cover -> toc -> body, via a single qpdf call.
     """
     sys.path.insert(0, str(repo_root() / "scripts"))
     from convert import create_cover_page  # noqa: PLC0415
 
-    guide_md = repo_root() / "docs" / "guide" / "index.md"
+    guide_md = repo_root() / "docs" / "ru" / "guide" / "index.md"
     ci       = bool(os.environ.get("CI"))
 
     print("  Parsing ToC headings...", flush=True)
@@ -433,7 +433,7 @@ def main() -> int:
 
     # --- Light PDF ---
     if build_light:
-        guide_html = args.site_dir / "guide" / "index.html"
+        guide_html = args.site_dir / "ru" / "guide" / "index.html"
 
         if not args.skip_mkdocs:
             run_mkdocs(args.site_dir)

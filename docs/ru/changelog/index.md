@@ -6,12 +6,12 @@ hide:
 schema:
   "@context": https://schema.org
   "@type": Organization
-  "@id": https://anonymousplanet.net/
+  "@id": https://dataarchitectpro.github.io/thgtoa/
   name: Anonymous Planet
-  url: https://anonymousplanet.net/changelog/
+  url: https://dataarchitectpro.github.io/thgtoa/ru/changelog/
   logo: ../../media/profile.png
   sameAs:
-    - https://github.com/Anon-Planet
+    - https://github.com/DataArchitectPro
     - https://opencollective.com/anonymousplanetorg
 ---
 
@@ -24,7 +24,7 @@ schema:
     Создаётся автоматически исключительно из conventional commits.
   </p>
   <div class="hero-cta-row">
-    <a href="https://github.com/Anon-Planet/thgtoa/releases" class="hero-cta hero-cta--primary">Выпуски GitHub</a>
+    <a href="https://github.com/DataArchitectPro/thgtoa/releases" class="hero-cta hero-cta--primary">Выпуски GitHub</a>
     <a href="../verify/" class="hero-cta hero-cta--secondary">Проверить выпуск</a>
   </div>
 </div>

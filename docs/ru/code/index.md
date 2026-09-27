@@ -7,12 +7,12 @@ hide:
 schema:
   "@context": https://schema.org
   "@type": Organization
-  "@id": https://anonymousplanet.net/
+  "@id": https://dataarchitectpro.github.io/thgtoa/
   name: Anonymous Planet
-  url: https://anonymousplanet.net/code/
+  url: https://dataarchitectpro.github.io/thgtoa/ru/code/
   logo: ../../media/profile.png
   sameAs:
-    - https://github.com/Anon-Planet
+    - https://github.com/DataArchitectPro
     - https://opencollective.com/anonymousplanetorg
 ---
 
@@ -23,7 +23,7 @@ schema:
     Вклад может быть любым: от исправления опечатки до написания целых новых разделов.
   </p>
   <div class="hero-cta-row">
-    <a href="https://github.com/Anon-Planet/thgtoa/issues/new" class="hero-cta hero-cta--primary">Создать задачу</a>
+    <a href="https://github.com/DataArchitectPro/thgtoa/issues/new" class="hero-cta hero-cta--primary">Создать задачу</a>
     <a href="#pipeline" class="hero-cta hero-cta--secondary">Конвейер выпуска</a>
   </div>
 </div>
@@ -191,7 +191,7 @@ chore(ci): pin Chrome version to 120
 - **Не следует** бросать PR во время проверки — оставайтесь на связи
 - **Не следует** напрямую менять PR во время активной проверки — отправляйте изменения в ветку проверки
 
-Пример того, чего _не_ следует делать, см. в [PR #51](https://github.com/Anon-Planet/thgtoa/pull/51).
+Пример того, чего _не_ следует делать, см. в [PR #51](https://github.com/Anon-Planet/thgtoa/pull/51) (апстрим).
 
 !!! warning "Перед отправкой"
     - Убедитесь, что рабочее дерево чистое (`git status`)

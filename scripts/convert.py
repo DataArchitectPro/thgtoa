@@ -265,15 +265,15 @@ html, body {{
 </head>
 <body>
 <div class="page">
-  <p class="title">The Hitchhiker&#8217;s Guide<br>to Online Anonymity</p>
+  <p class="title">Путеводитель автостопщика<br>по анонимности в сети</p>
   <div class="rule"></div>
-  <p class="subtitle">The comprehensive guide for online anonymity and OpSec.</p>
+  <p class="subtitle">Подробное руководство по анонимности и операционной безопасности в сети.</p>
   <div class="meta">
-    <p><strong>Author</strong> &nbsp; Anonymous Planet</p>
-    <p><strong>License</strong> &nbsp; Creative Commons BY-SA 4.0</p>
-    <p><strong>Source</strong> &nbsp; https://anonymousplanet.net</p>
+    <p><strong>Автор</strong> &nbsp; Anonymous Planet</p>
+    <p><strong>Лицензия</strong> &nbsp; Creative Commons BY-SA 4.0</p>
+    <p><strong>Источник</strong> &nbsp; https://anonymousplanet.net</p>
   </div>
-  <p class="version">v1.2.6 &mdash; July 12 2026</p>
+  <p class="version">v1.2.6 &mdash; 12 июля 2026</p>
 </div>
 </body>
 </html>""")
@@ -358,7 +358,7 @@ def convert_pdf_to_dark(
                f"--print-to-pdf={cover_pdf}", cover_html_path]
         subprocess.run(cmd, check=True, capture_output=True)
 
-        guide_md = Path(__file__).resolve().parent.parent / 'docs' / 'guide' / 'index.md'
+        guide_md = Path(__file__).resolve().parent.parent / 'docs' / 'ru' / 'guide' / 'index.md'
         if guide_md.is_file():
             print("  Building ToC...", flush=True)
             headings = parse_toc_headings(guide_md)

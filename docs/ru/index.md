@@ -7,12 +7,12 @@ hide:
 schema:
   "@context": https://schema.org
   "@type": WebPage
-  "@id": https://anonymousplanet.net/
+  "@id": https://dataarchitectpro.github.io/thgtoa/
   name: Anonymous Planet
-  url: https://anonymousplanet.net/
+  url: https://dataarchitectpro.github.io/thgtoa/
   logo: media/profile.svg
   sameAs:
-    - https://github.com/Anon-Planet
+    - https://github.com/DataArchitectPro
     - https://opencollective.com/anonymousplanetorg
 ---
 <div class="hero-block">
